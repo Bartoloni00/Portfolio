@@ -6,42 +6,36 @@ import skills from '../utils/skills';
 const Array = skills;
 const phrases = ['Tecnologias que manejo', 'Programas con los que trabajo', 'Herramientas que uso', 'Lenguajes de programación que conozco', 'Framework que utilizo'];
 
-/*
-arreglar imagen de windows, centos, JS, github
-*/
 </script>
 <template>
-    <section class="my-10">
-            <div class="flex justify-center items-center w-screen h-12">
-                <Vue3Marquee
-                    direction="reverse"
-                    :duration="200"
-                >
-                    <div v-for="prase in phrases" :key="prase">
-                        <span
-                            class="text-xl text-center text-text m-16"
-                        >
-                        {{ prase }}
-                        </span>
-                    </div>
-                </Vue3Marquee>
-            </div>
+    <section class="my-16">
+        <h2 class="text-3xl text-text text-center mb-4">Lenguajes y tecnologias que manejo</h2>
         <Vue3Marquee :pause-on-hover="true" :duration="50">
             <CardSkill class="card mx-4" v-for="skill in Array" :key="skill.name" :skill="skill" />
         </Vue3Marquee>
-            <div class="flex justify-center items-center w-screen h-12">
-                <Vue3Marquee
-                    direction="reverse"
-                    :duration="200"
-                >
-                <div v-for="prase in phrases" :key="prase">
-                    <span
-                        class="text-xl text-center text-text m-16"
-                    >
-                    {{ prase }}
-                    </span>
-                </div>
-                </Vue3Marquee>
-            </div>
     </section>
 </template>
+<style scoped>
+    h2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    h2::before,
+    h2::after {
+        content: "";
+        flex: 1;
+        height: 2px;
+        background-color: #FF2D2044;
+        margin: 0 10px;
+    }
+
+    h2::before {
+        margin-left: 0;
+    }
+
+    h2::after {
+        margin-right: 0;
+    }
+</style>
