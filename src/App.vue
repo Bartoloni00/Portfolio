@@ -2,7 +2,8 @@
 import HeroSection from './sections/HeroSection.vue'
 import AboutMe from './sections/AboutMe.vue'
 import NavBar from './components/NavBar.vue'
-import MarqueeSkills from './sections/MarqueeSkills.vue';
+import ExperienceSection from './sections/ExperienceSection.vue'
+import MarqueeSkills from './sections/MarqueeSkills.vue'
 </script>
 
 <template>
@@ -10,6 +11,7 @@ import MarqueeSkills from './sections/MarqueeSkills.vue';
     <main class="max-w-screen-xl mx-auto">
       <HeroSection/>
       <AboutMe/>
+      <ExperienceSection/>
       <MarqueeSkills/>
   </main>
 </template>
