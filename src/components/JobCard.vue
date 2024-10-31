@@ -6,7 +6,6 @@ const props = defineProps({
         title: String,
         description: String,
         url: String,
-        image: String,
         location: String,
         date: String
     }
@@ -14,26 +13,23 @@ const props = defineProps({
 </script>
 <template>
 <article class="p-4">
-    
-    <div class="flex justify-between flex-wrap mb-4">
-                <h3 class="font-bold ">{{ props.job.title }} <span class="font-normal"> en {{ props.job.company }}</span></h3>
-                <span>{{ props.job.date }}</span>
-            </div>
-    <div class="flex justify-between">
-        <img :src="`..${props.job.image}`" :alt="`${props.job.company} Logo`" class="h-64 mx-auto my-auto clip">
-
-        <div>
-            <span class="text-text"><i class="pi pi-map-marker mr-1"></i> {{ props.job.location }}</span>
-
-            <ul class="mt-4">
-                <li v-for="responsibility in props.job.responsibilities" :key="responsibility" class="mb-2 text-text flex items-start justify-start">
-                    <i class="pi pi-check-circle"></i> <span class="ml-2 inline-block">{{ responsibility }}</span>
-                </li>
-            </ul>
-        </div>
+        <h3 class="font-bold text-center">{{ props.job.title }} </h3>
+        <a :href="`${props.job.url}`" target="_blank" class="text-text hover:text-primary transition-all animate__animated hover:animate__backInRight">
+            <p class="font-normal text-center mb-4">{{ props.job.company }}</p>
+        </a>
+    <div class="flex justify-between items-center flex-col">
+        <ul class="flex gap-2 justify-start items-start w-full flex-col">
+            <li class="text-text"><i class="pi pi-map-marker mr-1" title="Lugar de trabajo"></i> {{ props.job.location }}</li>
+            <li><i class="pi pi-calendar mr-1 mb-8" title="tiempo en la empresa"></i> {{ props.job.date }}</li>
+        </ul>
+        <ul class="mt-2">
+            <li v-for="responsibility in props.job.responsibilities" :key="responsibility" class="mb-2 text-text flex items-start justify-start">
+                <i class="pi pi-check-circle" title="tiempo en la empresa"></i> <span class="ml-2 inline-block">{{ responsibility }}</span>
+            </li>
+        </ul>
     </div>
     <ul class="flex flex-wrap gap-2 justify-center mt-2">
-        <li v-for="skill in props.job.skills" :key="skill" class="mb-2 border border-primary/45 py-2 px-4 rounded-md bg-primary/10 text-text">
+        <li v-for="skill in props.job.skills" :key="skill" class="mb-2 border border-primary/45 py-1 px-2 rounded-md bg-primary/10 text-text text-xs font-semibold">
             {{ skill }}
         </li>
     </ul>

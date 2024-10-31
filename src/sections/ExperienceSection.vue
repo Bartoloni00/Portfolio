@@ -3,9 +3,11 @@ import JobCard from '../components/JobCard.vue';
 import jobExperience from '../utils/jobExperience';
 </script>
 <template>
-    <section>
+    <section class="mt-16">
         <h2 class="text-3xl text-text text-center">Experiencia</h2>
-        <JobCard class="card mx-4 my-4" v-for="job in jobExperience" :key="job.title" :job="job"/>
+        <div class="flex flex-wrap justify-between gap-4 mx-auto">
+            <JobCard class="max-w-sm mx-4 my-4" v-for="job in jobExperience" :key="job.title" :job="job"/>
+        </div>
     </section>
 </template>
 <style scoped>

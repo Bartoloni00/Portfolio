@@ -11,7 +11,7 @@ const phrases = ['Tecnologias que manejo', 'Programas con los que trabajo', 'Her
     <section class="my-16">
         <h2 class="text-3xl text-text text-center mb-4">Lenguajes y tecnologias que manejo</h2>
         <Vue3Marquee :pause-on-hover="true" :duration="50">
-            <CardSkill class="card mx-4" v-for="skill in Array" :key="skill.name" :skill="skill" />
+            <CardSkill class="card m-4" v-for="skill in Array" :key="skill.name" :skill="skill" />
         </Vue3Marquee>
     </section>
 </template>
