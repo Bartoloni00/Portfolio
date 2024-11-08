@@ -9,9 +9,9 @@ import CommonButton from './CommonButton.vue';
         <nav class="flex gap-6  bg-background-secondary px-4 rounded-full h-full items-center outline outline-2 outline-textSecondary/30 hover:outline-primary/30">
             <ul class="flex gap-4">
                 <li class=" hover:text-primary hover:scale-105 transition-all "><a href="#about">Sobre mi</a></li>
-                <li class=" hover:text-primary hover:scale-105 transition-all"><a href="$experience">Experiencia</a></li>
-                <li class=" hover:text-primary hover:scale-105 transition-all"><a href="proyects">Proyectos</a></li>
-                <li class=" hover:text-primary hover:scale-105 transition-all "><a href="contact">Contactame</a></li>
+                <li class=" hover:text-primary hover:scale-105 transition-all"><a href="#experience">Experiencia</a></li>
+                <li class=" hover:text-primary hover:scale-105 transition-all"><a href="#proyects">Proyectos</a></li>
+                <li class=" hover:text-primary hover:scale-105 transition-all "><a href="#contact">Contactame</a></li>
             </ul>
         </nav>
         <CommonButton></CommonButton>

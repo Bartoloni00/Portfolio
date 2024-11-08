@@ -4,6 +4,7 @@ import AboutMe from './sections/AboutMe.vue'
 import NavBar from './components/NavBar.vue'
 import ExperienceSection from './sections/ExperienceSection.vue'
 import MarqueeSkills from './sections/MarqueeSkills.vue'
+import MyProyects from './sections/MyProyects.vue'
 </script>
 
 <template>
@@ -13,6 +14,7 @@ import MarqueeSkills from './sections/MarqueeSkills.vue'
       <AboutMe/>
       <ExperienceSection/>
       <MarqueeSkills/>
+      <MyProyects/>
   </main>
 </template>
 
