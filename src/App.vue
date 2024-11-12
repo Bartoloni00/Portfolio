@@ -1,20 +1,16 @@
 <script setup>
 import HeroSection from './sections/HeroSection.vue'
-import AboutMe from './sections/AboutMe.vue'
+import HeaderBanner from './components/HeaderBanner.vue'
 import NavBar from './components/NavBar.vue'
-import ExperienceSection from './sections/ExperienceSection.vue'
-import MarqueeSkills from './sections/MarqueeSkills.vue'
-import MyProyects from './sections/MyProyects.vue'
+import ContentPage from './ContentPage.vue'
 </script>
 
 <template>
-    <NavBar/>
-    <main class="max-w-screen-xl mx-auto">
+    <HeaderBanner/>
+    <main class="max-w-[800px] mx-auto">
       <HeroSection/>
-      <AboutMe/>
-      <ExperienceSection/>
-      <MarqueeSkills/>
-      <MyProyects/>
+      <NavBar/>
+      <ContentPage/>
   </main>
 </template>
 

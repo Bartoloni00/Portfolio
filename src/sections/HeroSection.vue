@@ -1,17 +1,39 @@
 <script setup>
 import 'animate.css';
-import CommonButton from '../components/CommonButton.vue';
-
 </script>
 <template>
-    <section class="flex flex-col justify-center items-center gap-8 min-h-screen">
-        <h1 class="text-center text-9xl font-extrabold animate__animated animate__backInLeft text-text">Bartoloni Abraham</h1>
-        <p class="text-center text-3xl animate__animated animate__backInRight text-primary font-bold">
-            Desarrollando para facilitarle la vida a las personas, <span class="text-xl text-text">Programador full-stack orientado a backend.</span>
+    <section class="mt-24 mx-8">
+        <h1 class="font-bold text-3xl animate__animated animate__backInLeft text-text">Jonathan Abraham Bartoloni</h1>
+        <p class="animate__animated animate__backInRight text-text font-semibold my-2">
+            Desarrollando para facilitarle la vida a las personas.
         </p>
-        <div class="flex justify-center items-center gap-4">
-            <CommonButton class="h-12 w-32"></CommonButton>
-            <CommonButton class="h-12 w-32">Contactame</CommonButton> 
-        </div>
-    </section>
+        <p class="animate__animated animate__backInRight text-text font-semibold">
+            Programador Full-Stack orientado a Backend, Apasionado por linux, Asesor IT.
+        </p>
+        <ul class="flex text-text font-normal mt-4 gap-4 items-center">
+            <li class="work">Disponible</li>
+            <li class="birthday">18-04-2000</li>
+            <li class="date">Programando desde 2020</li>
+        </ul>
+</section>
 </template>
+<style scoped>
+.work::before, .birthday::before, .date::before{
+    content: url('icons/icons8-work-50.png');
+    display: inline-block;
+    transform: scale(0.5);
+}
+.work, .birthday, .date{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.birthday::before{
+    content: url('icons/icons8-birthday-50.png');
+}
+.date::before{
+    content: url('icons/icons8-date-50.png');
+}
+</style>

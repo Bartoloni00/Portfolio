@@ -1,7 +1,7 @@
 <script setup>
 </script>
 <template>
-    <section class="flex justify-between items-start duration-1000 ease-in-out" id="about" v-animateonscroll="{ enterClass: 'animate-zoomin', leaveClass: 'animate-fadeout' }" >
+    <section class="flex justify-between items-start duration-1000 ease-in-out mt-8" id="about" v-animateonscroll="{ enterClass: 'animate-zoomin', leaveClass: 'animate-fadeout' }" >
         <div class="flex flex-col items-start w-full pr-4">
             <h2 class="text-3xl mb-8">Sobre mi</h2>
             <div class="m-auto">
