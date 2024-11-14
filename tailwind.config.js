@@ -4,13 +4,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        text: '#1C1C1C', // Gris oscuro profundo para el texto principal
-        primary: '#FF2D20', // Rojo de acento similar al de Laravel
+        text: '#345540',
+        text2: '#173321',
+        primary: '#84feae',
         background: {
-          primary: '#F5F5F5', // Gris muy claro para el fondo principal
-          secondary: '#E0E0E0', // Gris claro para fondos secundarios
+          primary: '#63806D', // Gris muy claro para el fondo principal
+          secondary: '#91AA9A', // Gris claro para fondos secundarios
         },
-        textSecondary: '#3A3A3A', // Gris medio para subtítulos o texto adicional
+        textSecondary: '#92D5A9', // Gris medio para subtítulos o texto adicional
       },
     },
   },

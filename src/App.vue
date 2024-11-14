@@ -1,5 +1,6 @@
 <script setup>
 import HeroSection from './sections/HeroSection.vue'
+import FooterSection from './sections/FooterSection.vue'
 import HeaderBanner from './components/HeaderBanner.vue'
 import NavBar from './components/NavBar.vue'
 import ContentPage from './ContentPage.vue'
@@ -12,6 +13,7 @@ import ContentPage from './ContentPage.vue'
       <NavBar/>
       <ContentPage/>
   </main>
+  <FooterSection/>
 </template>
 
 <style scoped>

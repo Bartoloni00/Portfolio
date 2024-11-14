@@ -11,11 +11,6 @@ const updateHash = () => {
 
 onMounted(() => {
   window.addEventListener('hashchange', updateHash);
-  console.log('mounted', hash.value);
-});
-
-watch(hash, () => {
-  console.log('watch', hash.value);
 });
 
 onUnmounted(() => {

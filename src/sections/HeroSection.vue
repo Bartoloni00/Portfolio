@@ -3,14 +3,14 @@ import 'animate.css';
 </script>
 <template>
     <section class="mt-24 mx-8">
-        <h1 class="font-bold text-3xl animate__animated animate__backInLeft text-text">Jonathan Abraham Bartoloni</h1>
-        <p class="animate__animated animate__backInRight text-text font-semibold my-2">
+        <h1 class="font-bold text-3xl animate__animated animate__backInLeft text-text2">Jonathan Abraham Bartoloni</h1>
+        <p class="animate__animated animate__backInRight text-text2 font-semibold my-2">
             Desarrollando para facilitarle la vida a las personas.
         </p>
-        <p class="animate__animated animate__backInRight text-text font-semibold">
+        <p class="animate__animated animate__backInRight text-text2 font-semibold">
             Programador Full-Stack orientado a Backend, Apasionado por linux, Asesor IT.
         </p>
-        <ul class="flex text-text font-normal mt-4 gap-4 items-center">
+        <ul class="flex text-text2 font-normal mt-4 gap-4 items-center">
             <li class="work">Disponible</li>
             <li class="birthday">18-04-2000</li>
             <li class="date">Programando desde 2020</li>
