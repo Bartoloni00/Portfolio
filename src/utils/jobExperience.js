@@ -8,7 +8,7 @@ const jobExperience = [
             'Implementación de metodologías efectivas para mejorar la comprensión y aplicación de los conceptos enseñados.',
             'Gestión eficiente del tiempo y las sesiones para asegurar una experiencia de aprendizaje personalizada y efectiva.'
         ],
-        skills: ['PHP', 'Laravel', 'Node.js', 'Express.js', 'TypeScript', 'Trello'],
+        skills: ['PHP', 'Laravel', 'Node.js', 'Express.js', 'TypeScript', 'Trello', 'React', 'Vite', 'Tailwind CSS', 'MySQL', 'MongoDB'],
         url: 'https://www.threads.net/@abrahambartoloni',
         location: 'Remoto',
         date: 'Mar 2024 - Presente'

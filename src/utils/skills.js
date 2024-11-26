@@ -36,7 +36,7 @@ const skills = [
         "image": "/icons/Vue.js.svg"
     },
     {
-        "name": "Tailwind",
+        "name": "TailwindCSS",
         "url": "https://tailwindcss.com/",
         "description": "Framework CSS de código abierto para la creación de interfaces de usuario.",
         "image": "/icons/Tailwind CSS.svg"
@@ -46,24 +46,6 @@ const skills = [
         "url": "https://getbootstrap.com/",
         "description": "Framework CSS de código abierto para la creación de interfaces de usuario.",
         "image": "/icons/Bootstrap.svg"
-    },
-    {
-        "name": "HTML",
-        "url": "https://www.w3schools.com/html/",
-        "description": "Lenguaje de marcado para la creación de páginas web.",
-        "image": "/icons/HTML5.svg"
-    },
-    {
-        "name": "CSS",
-        "url": "https://www.w3schools.com/css/",
-        "description": "Lenguaje de estilo para la creación de páginas web.",
-        "image": "/icons/CSS3.svg"
-    },
-    {
-        "name": "Git",
-        "url": "https://git-scm.com/",
-        "description": "Sistema de control de versiones distribuido.",
-        "image": "/icons/Git.svg"
     },
     {
         "name": "Node.js",
@@ -90,40 +72,10 @@ const skills = [
         "image": "/icons/Jest.svg"
     },
     {
-        "name": "Vite.js",
-        "url": "https://vitejs.dev/",
-        "description": "Framework de código abierto para la creación de aplicaciones web.",
-        "image": "/icons/Vite.js.svg"
-    },
-    {
         "name": "Firebase",
         "url": "https://firebase.google.com/",
         "description": "Plataforma de código abierto para la creación de aplicaciones web.",
         "image": "/icons/Firebase.svg"
-    },
-    {
-        "name": "Illustrator",
-        "url": "https://www.adobe.com/es/products/illustrator.html",
-        "description": "Herramienta de diseño vectorial.",
-        "image": "/icons/Adobe Illustrator.svg"
-    },
-    {
-        "name": "Photoshop",
-        "url": "https://www.adobe.com/es/products/photoshop.html",
-        "description": "Herramienta de diseño y edición de imágenes.",
-        "image": "/icons/Adobe Photoshop.svg"
-    },
-    {
-        "name": "Figma",
-        "url": "https://www.figma.com/",
-        "description": "Herramienta de diseño colaborativo.",
-        "image": "/icons/Figma.svg"
-    },
-    {
-        "name": "Linux",
-        "url": "https://www.linux.org/",
-        "description": "Sistema operativo de código abierto basado en Unix.",
-        "image": "/icons/Linux.svg"
     }
 ];
 

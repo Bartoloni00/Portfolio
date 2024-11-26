@@ -15,7 +15,14 @@ import CommonButton from './CommonButton.vue';
     <div class="w-[800px] mx-auto color relative">
     <img src="/giphy.webp" alt="pc animada" class="m-auto mt-4 top-0 left-0 h-[300px] object-cover">
     <img src="/myface.png" alt="foto de abraham bartoloni" class="absolute bottom-[-75px] left-[32px] h-[150px] object-cover">
-    <CommonButton class="absolute bottom-[-65px] right-[30px] h-8 object-cover">Descargar CV</CommonButton>
+    <CommonButton class="absolute bottom-[-65px] right-[30px] h-8 object-cover">
+        <a
+      href="/CV-BartoloniAbraham.pdf"
+      download="Jonathan_Abraham_Bartoloni_CV.pdf"
+    >
+      Descargar CV
+    </a>
+    </CommonButton>
 
     </div>
 </template>

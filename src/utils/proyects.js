@@ -2,6 +2,8 @@ const proyects = [
     {
         id: 1,
         title: 'Aragoge',
+        year: '2024',
+        date: 'Oct. 2023 - Presente',
         rol: 'Backend Developer',
         description: 'Aragoge tiene como misión crear un punto de encuentro entre atletas y profesionales del deporte, facilitando la contratación de entrenadores, preparadores físicos, nutricionistas y terapeutas que se ajusten a las necesidades de los atletas. Al mismo tiempo, la plataforma ofrece a los profesionales del deporte la oportunidad de crecer profesionalmente, expandiendo su base de clientes y gestionando sus servicios desde un único lugar.',
         code: {
@@ -13,6 +15,8 @@ const proyects = [
     {
         id: 2,
         title: 'BarBrainDB',
+        year: '2024',
+        date: 'Mar. 2024 - May. 2024',
         rol: 'Fullstack Developer',
         description: 'Buscador de tragos y cocteles, Construccion de una api que contenga una gran variedad de tragos y cocteles de todo tipo y de todo el mundo',
         code: {
@@ -20,22 +24,26 @@ const proyects = [
             frontend: 'https://github.com/Bartoloni00/barBrainApp',
         },
         cover: 'proyects/barbraindb.jpg',
-        technologies: ['Node.js', 'Express', 'MongoDB', 'Vue.js', 'TailwindCSS', 'Git'],
+        technologies: ['Node.js', 'Express.js', 'MongoDB', 'Vue.js', 'TailwindCSS', 'Git', 'JavaScript'],
     },
     {
         id: 3,
         title: 'Hijitus-API',
+        year: '2024',
+        date: 'Sep. 2024',
         rol: 'Backend Developer',
         description: 'Api open-source creada por mi la cual contiene todos los personajes de hijitus. Este proyecto tuvo bastante apoyo en redes sociales y varias personas quisieron colaborar conmi proyecto y me ayudaron a crear el proyecto',
         code: {
             backend: 'https://github.com/Bartoloni00/hijitus-api',
         },
         cover: 'proyects/Hijitus-api.png',
-        technologies: ['Node.js', 'Express', 'TypeScript', 'Jest', 'Git'],
+        technologies: ['Node.js', 'Express.js', 'TypeScript', 'Jest', 'Git', 'JavaScript'],
     },
     {
         id: 4,
         title: 'Bookstore',
+        year: '2023',
+        date: 'Oct. 2023 - May. 2024',
         rol: 'Fullstack Developer',
         description: 'Tienda de libros, Creada con Laravel junto a Ezequiel Arevalo. Este proyecto fue construido para la materia de "Portales y comercio electronico"',
         code: {
@@ -47,6 +55,8 @@ const proyects = [
     {
         id: 5,
         title: 'CuevanaGames',
+        year: '2023',
+        date: 'Oct. 2023 - Ene. 2024',
         rol: 'Fullstack Developer',
         description: 'Tienda de videojuegos creada junto a Ezequiel Arevalo para la materia de "Clientes Web mobile"',
         code: {
@@ -58,6 +68,8 @@ const proyects = [
     {
         id: 6,
         title: 'ChatLand',
+        year: '2023',
+        date: 'Ago. 2023',
         rol: 'Fullstack Developer',
         description: 'Aplicacion de chat para escritorio creada con PHP y MySQL vanilla',
         code: {
@@ -70,6 +82,8 @@ const proyects = [
     {
         id: 7,
         title: 'TrainEmpire',
+        year: '2023',
+        date: 'Abr. 2023 - Jun. 2023',
         rol: 'Fullstack Developer',
         description: 'Marketplace para contratar entrenadores personales para la materia "Programacion II"',
         code: {
@@ -82,6 +96,8 @@ const proyects = [
     {
         id: 8,
         title: 'Task-tracker',
+        year: '2024',
+        date: 'Ago. 2024',
         rol: 'Backend Developer',
         description: 'Aplicacion de consola creada para cumplir el reto de roadmap.sh',
         code: {
@@ -94,6 +110,8 @@ const proyects = [
     {
         id: 9,
         title: 'SunHunter',
+        year: '2024',
+        date: 'Jul. 2024',
         rol: 'Frontend Developer',
         description: 'Aplicacion del clima con tematica ¿Donde y con que voy a tomar el mate de hoy?',
         code: {
@@ -105,6 +123,8 @@ const proyects = [
     {
         id: 10,
         title: 'SlotMachine',
+        year: '2023',
+        date: 'Dic. 2023',
         rol: 'Frontend Developer',
         description: 'Maquina tragamonedas con tematica Argentina',
         code: {
@@ -116,6 +136,8 @@ const proyects = [
     {
         id: 11,
         title: 'JokesApp',
+        year: '2023',
+        date: 'Ago. 2023',
         rol: 'Frontend Developer',
         description: 'Aplicacion de generacion de bromas aleatorias estilo chuck norris en la cual podes elegir el lenguaje de la broma y cambiar el nombre de la persona a la que esta dirigida',
         code: {
@@ -123,29 +145,33 @@ const proyects = [
         },
         cover: 'proyects/jokesApp.png',
         video: 'https://www.youtube.com/watch?v=IRYIpdR-8vc',
-        technologies: ['vue.js', 'tailwindcss', 'git', 'javascript', 'html', 'css'],
+        technologies: ['Vue.js', 'TailwindCSS', 'git', 'javascript', 'html', 'css', 'JavaScript'],
     },
     {
         id: 12,
         title: 'Liobarton',
+        year: '2023',
+        date: 'May. 2023',
         rol: 'Frontend Developer',
         description: 'PWA de seguimiento de criptomonedas',
         code: {
             app: 'https://github.com/Bartoloni00/liobarton',
         },
         cover: 'proyects/Liobarton.png',
-        technologies: ['javascript', 'html', 'css'],
+        technologies: ['JavaScript', 'html', 'css'],
     },
     {
         id: 13,
         title: 'CurrencyConverter',
+        year: '2022',
+        date: 'Oct. 2022',
         rol: 'Frontend Developer',
         description: 'Aplicacion de conversion de divisas',
         code: {
             app: 'https://github.com/Bartoloni00/currency-converter',
         },
         cover: 'proyects/currencyConverter.png',
-        technologies: ['javascript', 'php', 'html', 'css'],
+        technologies: ['JavaScript', 'php', 'html', 'css'],
     }
 ]
 

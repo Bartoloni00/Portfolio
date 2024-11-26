@@ -2,7 +2,7 @@
 import PublishCard from '../components/PublishCard.vue';
 </script>
 <template>
-    <section class="flex flex-col duration-1000 ease-in-out mt-8" id="about" v-animateonscroll="{ enterClass: 'animate-zoomin', leaveClass: 'animate-fadeout' }" >
+    <section class="flex flex-col duration-1000 ease-in-out" id="about" v-animateonscroll="{ enterClass: 'animate-zoomin', leaveClass: 'animate-fadeout' }" >
         <PublishCard tag="&#x1F680; Buscando resolver problemas" :content="{
             title: 'Me presento:',
             date: '2024-11-13',

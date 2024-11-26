@@ -10,8 +10,7 @@ const emojis = [
 ];
 </script>
 <template>
-    <section class="mt-16">
-        <h2 class="text-3xl text-text text-center" id="experience">Experiencia</h2>
+    <section>
         <div v-for="job, index in jobExperience" :key="job.title" :job="job">
             <PublishCard :tag="`${emojis[index]} ${job.company}`" :content="{
             title: job.title,
@@ -23,8 +22,8 @@ const emojis = [
                 }
         }">
         <ul class="mt-2">
-            <li v-for="responsibility in job.responsibilities" :key="responsibility" class="mb-2 text-text flex items-start justify-start">
-                <i class="pi pi-check-circle" title="tiempo en la empresa"></i> <span class="ml-2 inline-block">{{ responsibility }}</span>
+            <li v-for="responsibility in job.responsibilities" :key="responsibility" class="mb-2">
+                <span class="inline-block">{{ responsibility }}</span>
             </li>
         </ul>
         <ul class="flex flex-wrap gap-2 justify-center mt-2">
