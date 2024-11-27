@@ -12,22 +12,22 @@
 </template>
 <style scoped>
 .github{
-    content: url('icons/icons8-github-50.png');
+    content: url('/icons/icons8-github-50.png');
     display: inline-block;
     transform: scale(0.65);
 }
 .threads{
-    content: url('icons/icons8-hilos-48.png');
+    content: url('/icons/icons8-hilos-48.png');
     display: inline-block;
     transform: scale(0.77);
 }
 .linkedin{
-    content: url('icons/icons8-linkedin-50.png');
+    content: url('/icons/icons8-linkedin-50.png');
     display: inline-block;
     transform: scale(0.65);
 }
 .youtube{
-    content: url('icons/icons8-youtube-50.png');
+    content: url('/icons/icons8-youtube-50.png');
     display: inline-block;
     transform: scale(0.65);
 }

@@ -19,7 +19,7 @@ import 'animate.css';
 </template>
 <style scoped>
 .work::before, .birthday::before, .date::before{
-    content: url('icons/icons8-work-50.png');
+    content: url('/icons/icons8-work-50.png');
     display: inline-block;
     transform: scale(0.5);
 }
@@ -31,9 +31,9 @@ import 'animate.css';
 }
 
 .birthday::before{
-    content: url('icons/icons8-birthday-50.png');
+    content: url('/icons/icons8-birthday-50.png');
 }
 .date::before{
-    content: url('icons/icons8-date-50.png');
+    content: url('/icons/icons8-date-50.png');
 }
 </style>

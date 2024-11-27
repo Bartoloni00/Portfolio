@@ -93,7 +93,7 @@ filterProyects();
             date: proyecto.date,
             place: 'Argentina',
             source: {
-                img: '/public/'+proyecto.cover,
+                img: proyecto.cover,
                 alt: 'Imagen de ' + proyecto.title + ' siendo utilizada'
             }
         }"

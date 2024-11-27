@@ -1,4 +1,5 @@
 <script setup>
+import URL from '../utils/URL';
 import CommonButton from './CommonButton.vue';
 
 </script>
@@ -17,7 +18,7 @@ import CommonButton from './CommonButton.vue';
     <img src="/myface.png" alt="foto de abraham bartoloni" class="absolute bottom-[-75px] left-[32px] h-[150px] object-cover">
     <CommonButton class="absolute bottom-[-65px] right-[30px] h-8 object-cover">
         <a
-      href="/CV-BartoloniAbraham.pdf"
+      :href="`${URL}/CV-BartoloniAbraham.pdf`"
       download="Jonathan_Abraham_Bartoloni_CV.pdf"
     >
       Descargar CV

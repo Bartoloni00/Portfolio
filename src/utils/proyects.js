@@ -9,7 +9,7 @@ const proyects = [
         code: {
             backend: 'https://github.com/bartoloni00/aragoge-backend',
         },
-        cover: 'proyects/aragoge.png',
+        cover: '/proyects/aragoge.png',
         technologies: ['Laravel', 'MySQL', 'Git', 'PHP'],
     },
     {
@@ -23,7 +23,7 @@ const proyects = [
             backend: 'https://github.com/Bartoloni00/barBrainDB',
             frontend: 'https://github.com/Bartoloni00/barBrainApp',
         },
-        cover: 'proyects/barbraindb.jpg',
+        cover: '/proyects/barbraindb.jpg',
         technologies: ['Node.js', 'Express.js', 'MongoDB', 'Vue.js', 'TailwindCSS', 'Git', 'JavaScript'],
     },
     {
@@ -36,7 +36,7 @@ const proyects = [
         code: {
             backend: 'https://github.com/Bartoloni00/hijitus-api',
         },
-        cover: 'proyects/Hijitus-api.png',
+        cover: '/proyects/Hijitus-api.png',
         technologies: ['Node.js', 'Express.js', 'TypeScript', 'Jest', 'Git', 'JavaScript'],
     },
     {
@@ -49,7 +49,7 @@ const proyects = [
         code: {
             app: 'https://github.com/Bartoloni00/bookstore',
         },
-        cover: 'proyects/hijitus-web.png',
+        cover: '/proyects/hijitus-web.png',
         technologies: ['Laravel', 'MySQL', 'Git', 'Bootstrap', 'JavaScript', 'PHP', 'Blade', 'html', 'css'],
     },
     {
@@ -62,7 +62,7 @@ const proyects = [
         code: {
             app: 'https://github.com/Bartoloni00/CuevanaGames',
         },
-        cover: 'proyects/cuevanagames.png',
+        cover: '/proyects/cuevanagames.png',
         technologies: ['Vue.js', 'TailwindCSS', 'Git', 'Firebase', 'JavaScript', 'html', 'css'],
     },
     {
@@ -75,7 +75,7 @@ const proyects = [
         code: {
             app: 'https://github.com/Bartoloni00/ChatLand',
         },
-        cover: 'proyects/chatland.png',
+        cover: '/proyects/chatland.png',
         video: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
         technologies: ['PHP', 'MySQL', 'Git', 'JavaScript', 'html', 'css'],
     },
@@ -89,7 +89,7 @@ const proyects = [
         code: {
             app: 'https://github.com/Bartoloni00/TrainEmpire',
         },
-        cover: 'proyects/trainempire.png',
+        cover: '/proyects/trainempire.png',
         video: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
         technologies: ['PHP', 'MySQL', 'Git', 'JavaScript', 'html', 'css', 'Bootstrap'],
     },
@@ -103,7 +103,7 @@ const proyects = [
         code: {
             app: 'https://github.com/Bartoloni00/Task-Tracker',
         },
-        cover: 'proyects/task-tracker.png',
+        cover: '/proyects/task-tracker.png',
         video: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
         technologies: ['JavaScript', 'Git', 'Node.js', 'TypeScript'],
     },
@@ -117,7 +117,7 @@ const proyects = [
         code: {
             app: 'https://github.com/Bartoloni00/SunHunter',
         },
-        cover: 'proyects/sunhunter.png',
+        cover: '/proyects/sunhunter.png',
         technologies: ['Vue.js', 'Vite.js','TailwindCSS', 'Git', 'JavaScript', 'html', 'css'],
     },
     {
@@ -130,7 +130,7 @@ const proyects = [
         code: {
             app: 'https://github.com/Bartoloni00/slotMachine',
         },
-        cover: 'proyects/slotmachine.png',
+        cover: '/proyects/slotmachine.png',
         technologies: ['html', 'css', 'JavaScript','Git'],
     },
     {
@@ -143,7 +143,7 @@ const proyects = [
         code: {
             app: 'https://github.com/Bartoloni00/jokesApp',
         },
-        cover: 'proyects/jokesApp.png',
+        cover: '/proyects/jokesApp.png',
         video: 'https://www.youtube.com/watch?v=IRYIpdR-8vc',
         technologies: ['Vue.js', 'TailwindCSS', 'git', 'javascript', 'html', 'css', 'JavaScript'],
     },
@@ -157,7 +157,7 @@ const proyects = [
         code: {
             app: 'https://github.com/Bartoloni00/liobarton',
         },
-        cover: 'proyects/Liobarton.png',
+        cover: '/proyects/Liobarton.png',
         technologies: ['JavaScript', 'html', 'css'],
     },
     {
@@ -170,7 +170,7 @@ const proyects = [
         code: {
             app: 'https://github.com/Bartoloni00/currency-converter',
         },
-        cover: 'proyects/currencyConverter.png',
+        cover: '/proyects/currencyConverter.png',
         technologies: ['JavaScript', 'php', 'html', 'css'],
     }
 ]
