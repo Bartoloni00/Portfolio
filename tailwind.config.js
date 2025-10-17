@@ -1,22 +1,35 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+export default {
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       colors: {
-        text: '#345540',
-        text2: '#173321',
-        primary: '#84feae',
-        background: {
-          primary: '#63806D', // Gris muy claro para el fondo principal
-          secondary: '#91AA9A', // Gris claro para fondos secundarios
+        primary: {
+          DEFAULT: '#FACC15', // Amarillo cálido (acento principal)
+          dark: '#EAB308',    // Amarillo más profundo
+          light: '#FEF08A',   // Amarillo suave para fondos o hover
         },
-        textSecondary: '#92D5A9', // Gris medio para subtítulos o texto adicional
+        neutral: {
+          900: '#0F0F0F', // Fondo casi negro
+          800: '#1E1E1E', // Gris carbón (principal)
+          700: '#2D2D2D', // Gris medio
+          600: '#3F3F3F', // Gris más claro
+        },
+        accent: {
+          DEFAULT: '#FDE68A', // Sutil contraste (por ejemplo, para highlights o tags)
+        },
+        text: {
+          primary: '#F9FAFB', // Texto principal (blanco suave)
+          secondary: '#D1D5DB', // Texto secundario (gris claro)
+        },
+      },
+      fontFamily: {
+        sans: ['Poppins', 'Inter', 'system-ui', 'sans-serif'],
+      },
+      boxShadow: {
+        card: '0 4px 20px rgba(0, 0, 0, 0.25)', // Sombras suaves y modernas
       },
     },
   },
-  variants: {
-    extend: {},
-  },
   plugins: [],
-}
+};
