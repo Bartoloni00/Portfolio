@@ -4,22 +4,41 @@ export const experiences: ExperienceItem[] = [
   {
     id: 'exp-1',
     role: {
+      es: 'Software Engineer (Full Stack)',
+      en: 'Software Engineer (Full Stack)'
+    },
+    company: 'Syloper',
+    period: {
+      es: 'diciembre de 2025 - actualidad',
+      en: 'December 2025 - Present'
+    },
+    description: {
+      es: 'Desarrollo full stack en plataformas financieras trabajando en todo el ciclo de vida del software (planning, desarrollo, deploy y debugging). Implemento soluciones backend y serverless con AWS (Lambda, DynamoDB, S3) e integro múltiples APIs externas y sistemas ERP. Gestiono autenticación basada en tokens y consistencia entre entornos. También participo en rediseños UX basados en Figma y en la mejora continua mediante code reviews, estimaciones y trabajo en equipo bajo Scrum.',
+      en: 'Full stack development on financial platforms, covering the entire software lifecycle (planning, development, deployment, and debugging). I build backend and serverless solutions using AWS (Lambda, DynamoDB, S3) and integrate multiple external APIs and ERP systems. I manage token-based authentication and environment consistency. I also contribute to UX redesigns based on Figma and continuous improvement through code reviews, estimations, and Scrum teamwork.'
+    },
+    technologies: ['Node.js', 'TypeScript', 'React', 'AWS', 'Lambda', 'DynamoDB', 'S3', 'CakePHP', 'Docker'],
+    image: '/syloper_logo.jpeg'
+  },
+  {
+    id: 'exp-2',
+    role: {
       es: 'Backend Developer',
       en: 'Backend Developer'
     },
     company: 'TelePagos',
     period: {
-      es: 'junio de 2025 - agosto de 2025',
-      en: 'June 2025 - August 2025'
+      es: 'junio de 2025 - octubre de 2025',
+      en: 'June 2025 - October 2025'
     },
     description: {
-      es: 'Diseñé e implementé módulos backend en Laravel aplicando Clean Architecture dentro de un monolito modular. Optimicé una base de datos de más de 200 tablas, resolviendo errores críticos y asegurando estabilidad. Documenté y validé APIs con Swagger, mejorando la comunicación con frontend.',
-      en: 'Designed and implemented backend modules in Laravel using Clean Architecture within a modular monolith. Optimized a database of over 200 tables, resolving critical errors and ensuring stability. Documented and validated APIs with Swagger, improving frontend communication.'
+      es: 'Diseñé e implementé módulos backend en Laravel aplicando Clean Architecture dentro de un monolito modular. Gestioné y optimicé una base de datos compleja (+200 tablas), resolviendo errores críticos y mejorando la estabilidad del sistema. Documenté y validé APIs con Swagger, facilitando la comunicación entre equipos. Participé en pair programming y mejoras continuas del código.',
+      en: 'Designed and implemented backend modules in Laravel using Clean Architecture within a modular monolith. Managed and optimized a complex database (+200 tables), resolving critical issues and improving system stability. Documented and validated APIs with Swagger, enhancing team communication. Participated in pair programming and continuous code improvements.'
     },
-    technologies: ['PHP', 'Laravel', 'MySQL', 'Swagger', 'Node.js', 'Docker']
+    technologies: ['PHP', 'Laravel', 'MySQL', 'Swagger', 'Docker'],
+    image: '/telepagos_logo.jpeg'
   },
   {
-    id: 'exp-2',
+    id: 'exp-3',
     role: {
       es: 'Consultor IT',
       en: 'IT Consultant'
@@ -30,13 +49,14 @@ export const experiences: ExperienceItem[] = [
       en: 'May 2024 - April 2025'
     },
     description: {
-      es: 'Optimización y mantenimiento de sistemas Windows y Linux, resolución de fallas críticas, ajustes avanzados de configuración y mejora de rendimiento de equipos. Soporte de hardware y administración de servidores.',
-      en: 'Optimization and maintenance of Windows and Linux systems, resolving critical failures, advanced configuration adjustments, and improving system performance. Hardware support and server administration.'
+      es: 'Optimización y mantenimiento de sistemas Windows y Linux, resolviendo fallas críticas y mejorando rendimiento. Administración de hardware y soporte técnico, con enfoque en estabilidad operativa. También participé en tareas de contenido digital y soporte a clientes.',
+      en: 'Optimization and maintenance of Windows and Linux systems, resolving critical failures and improving performance. Hardware administration and technical support focused on operational stability. Also contributed to digital content and client support.'
     },
-    technologies: ['Windows', 'Linux', 'Hardware', 'Networking']
+    technologies: ['Windows', 'Linux', 'Hardware', 'Networking'],
+    image: '/itPoint_logo.jpeg'
   },
   {
-    id: 'exp-3',
+    id: 'exp-4',
     role: {
       es: 'Tutor Privado',
       en: 'Private Tutor'
@@ -47,13 +67,13 @@ export const experiences: ExperienceItem[] = [
       en: 'April 2024 - March 2025'
     },
     description: {
-      es: 'Tutor especializado en PHP (Laravel 10 y 11), Node y React. Diseñé clases personalizadas adaptadas a cada estudiante, aumentando su comprensión y aplicación práctica en desarrollo web.',
-      en: 'Tutor specialized in PHP (Laravel 10 & 11), Node, and React. Designed personalized lessons adapted to each student, improving their understanding and practical application in web development.'
+      es: 'Tutor en desarrollo backend y full stack (Laravel, Node.js, React). Diseñé clases personalizadas enfocadas en resolución de problemas reales, buenas prácticas y arquitectura, mejorando la capacidad práctica de los estudiantes.',
+      en: 'Tutor in backend and full stack development (Laravel, Node.js, React). Designed personalized lessons focused on real problem-solving, best practices, and architecture, improving students’ practical skills.'
     },
     technologies: ['PHP', 'Laravel', 'Node.js', 'React', 'Vue.js']
   },
   {
-    id: 'exp-4',
+    id: 'exp-5',
     role: {
       es: 'Profesor Invitado en Desarrollo de Software',
       en: 'Guest Lecturer in Software Development'
@@ -61,19 +81,17 @@ export const experiences: ExperienceItem[] = [
     company: 'Instituto Superior Gaspar L. Benavento',
     period: {
       es: '2024 y 2025',
-      en: '2022 and 2025'
+      en: '2024 and 2025'
     },
     description: {
-      es: 'Orador invitado durante dos años consecutivos en el Instituto Superior Gaspar L. Benavento, presentando el ciclo de vida del desarrollo de software a +30 estudiantes, aportando conocimientos prácticos y motivando el interés por la programación.',
-      en: 'Guest speaker for two consecutive years at the Instituto Superior Gaspar L. Benavento, presenting the software development lifecycle to over 30 students, providing practical knowledge and inspiring interest in programming.'
+      es: 'Orador invitado presentando el ciclo de vida del desarrollo de software a +30 estudiantes. Enfoque en buenas prácticas, arquitectura y aplicación real del conocimiento.',
+      en: 'Guest speaker presenting the software development lifecycle to 30+ students, focusing on best practices, architecture, and real-world application.'
     },
     technologies: [
       'Software Architecture',
       'API Design',
       'Mentoring',
-      'Technical Communication',
-      'Teaching',
-      'Presentation Skills'
+      'Technical Communication'
     ]
   }
 ];

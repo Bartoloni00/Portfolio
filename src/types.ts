@@ -10,6 +10,7 @@ export interface Translation {
     period: Translation;
     description: Translation;
     technologies: string[];
+    image?: string;
   }
   
   export interface ProjectItem {

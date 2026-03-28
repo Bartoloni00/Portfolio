@@ -31,9 +31,15 @@ export default function Experience({ language, experiences }: ExperienceProps) {
               className={`bg-neutral-800 p-6 rounded-2xl shadow-card hover:shadow-2xl border border-transparent hover:border-primary transition-all transform hover:-translate-y-2 cursor-pointer animate-slideInUp delay-${index * 100}`}
             >
               <div className="flex items-start gap-4">
+                  {
+                    exp.image ? (
+                      <img src={exp.image} alt={exp.company} className="w-8 h-8 object-contain rounded-lg flex-shrink-0 " />
+                    ) : (
                 <div className="bg-primary-dark p-3 rounded-lg flex-shrink-0 text-neutral-900">
-                  <Briefcase size={24} />
+                      <Briefcase size={24} />
                 </div>
+                    )
+                  }
                 <div className="flex-1">
                   <h3 className="text-xl font-bold mb-1 text-text-primary">{exp.role[language]}</h3>
                   <p className="text-text-secondary font-semibold mb-2">{exp.company}</p>
@@ -49,9 +55,15 @@ export default function Experience({ language, experiences }: ExperienceProps) {
         {selectedExperience && (
           <div className="space-y-6 text-text-primary">
             <div className="flex items-start gap-4">
-              <div className="bg-primary-dark p-4 rounded-lg flex-shrink-0 text-neutral-900">
-                <Briefcase size={32} />
-              </div>
+              {
+                    selectedExperience.image ? (
+                      <img src={selectedExperience.image} alt={selectedExperience.company} className="w-8 h-8 object-contain rounded-lg flex-shrink-0 " />
+                    ) : (
+                <div className="bg-primary-dark p-3 rounded-lg flex-shrink-0 text-neutral-900">
+                      <Briefcase size={24} />
+                </div>
+                    )
+                  }
               <div className="flex-1">
                 <h2 className="text-3xl font-bold text-primary mb-2">{selectedExperience.role[language]}</h2>
                 <p className="text-xl text-text-secondary font-semibold">{selectedExperience.company}</p>
