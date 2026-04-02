@@ -30,6 +30,8 @@ export default function Hero({ language }: HeroProps) {
     },
   };
 
+  const cvFile = language === 'es' ? '/cv/es-cv-abraham-bartoloni.pdf' : '/cv/en-cv-abraham-bartoloni.pdf';
+
   const handleScroll = () => {
     const element = document.getElementById('experience');
     if (element) {
@@ -65,14 +67,14 @@ export default function Hero({ language }: HeroProps) {
             </p>
 
             <div className="flex gap-4">
-              <button
-                onClick={handleScroll}
+             <a
+                href={cvFile}
+                download
                 className="inline-flex items-center gap-2 px-6 py-3 border border-primary text-primary font-semibold rounded-lg transition-all hover:bg-primary/10"
               >
                 {content.cv[language]}
                 <FileDown size={18} />
-              </button>
-
+              </a>
               <button
                 onClick={handleScroll}
                 className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-neutral-900 font-bold rounded-lg shadow-lg transition-all transform hover:scale-105 hover:bg-primary-dark"
