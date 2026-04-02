@@ -1,4 +1,4 @@
-import { Globe, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Language } from '../types';
 import { useState } from 'react';
 
@@ -9,7 +9,7 @@ interface NavigationProps {
 
 export default function Navigation({ language, onLanguageChange }: NavigationProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
+  const flagSrc = language === 'es' ? '/language/es.png' : '/language/en.png';
   const navItems = {
     es: ['Inicio', 'Experiencia', 'Proyectos', 'Contacto'],
     en: ['Home', 'Experience', 'Projects', 'Contact']
@@ -45,7 +45,7 @@ export default function Navigation({ language, onLanguageChange }: NavigationPro
               <button
                 key={item}
                 onClick={() => handleScroll(sections[index])}
-                className="relative text-white font-medium transition-all duration-200 group"
+                className="relative text-white font-medium transition-all duration-200 group hover:text-yellow-500"
               >
                 <span className="group-hover:text-honey transition-colors duration-200 drop-shadow-sm">
                   {item}
@@ -58,10 +58,14 @@ export default function Navigation({ language, onLanguageChange }: NavigationPro
             <button
               onClick={() => onLanguageChange(language === 'es' ? 'en' : 'es')}
               className="flex items-center gap-2 px-4 py-2 border-2 border-honey text-white bg-transparent rounded-lg font-semibold 
-                         hover:bg-honey hover:text-onyx transition-all duration-300 shadow-md hover:shadow-honey/30 hover:border"
+                         hover:bg-honey hover:text-onyx transition-all duration-300 shadow-md hover:shadow-honey/30 hover:border-2 hover:border-yellow-500"
             >
-              <Globe size={18} />
-              {language === 'es' ? 'EN' : 'ES'}
+              <img
+                src={flagSrc}
+                alt={language === 'es' ? 'Español' : 'English'}
+                className="h-5 rounded-sm object-cover"
+              />
+              {language === 'es' ? 'ES' : 'EN'}
             </button>
           </div>
 
@@ -85,7 +89,7 @@ export default function Navigation({ language, onLanguageChange }: NavigationPro
               <button
                 key={item}
                 onClick={() => handleScroll(sections[index])}
-                className="block w-full text-left px-3 py-2 rounded-lg text-white hover:text-honey hover:bg-honey/10 transition-colors"
+                className="block w-full text-left px-3 py-2 rounded-lg text-white hover:text-honey hover:bg-honey/10 transition-colors hover:text-yellow-500"
               >
                 {item}
               </button>
@@ -100,8 +104,12 @@ export default function Navigation({ language, onLanguageChange }: NavigationPro
               className="flex items-center justify-center gap-2 w-full px-4 py-2 border-2 border-honey text-honey rounded-lg font-semibold 
                          hover:bg-honey hover:text-onyx transition-all duration-300 shadow-md hover:shadow-honey/30"
             >
-              <Globe size={18} />
-              {language === 'es' ? 'English' : 'Español'}
+              <img
+                src={flagSrc}
+                alt={language === 'es' ? 'Español' : 'English'}
+                className="h-5 rounded-sm object-cover"
+              />
+              {language === 'es' ? 'ES' : 'EN '}
             </button>
           </div>
         </div>
