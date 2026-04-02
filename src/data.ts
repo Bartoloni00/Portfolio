@@ -22,6 +22,24 @@ export const experiences: ExperienceItem[] = [
   {
     id: 'exp-2',
     role: {
+      es: 'Freelance Full Stack (Proyectos seleccionados)',
+      en: 'Freelance Full Stack (Selected Projects)'
+    },
+    company: 'Trabajo independiente',
+    period: {
+      es: 'Proyectos recientes',
+      en: 'Recent projects'
+    },
+    description: {
+      es: 'Lideré el desarrollo y resolución de sistemas para clientes en conjunto con otro desarrollador. Recuperé una aplicación crítica de gestión escolar en 14 días, resolviendo fallas en backend y frontend (Node.js, Express, React, MongoDB). Además, diseñé y desarrollé una plataforma SaaS multitenant para gestión de reservas en restaurantes, definiendo arquitectura, lógica de negocio y escalabilidad (Laravel, MySQL, React, TypeScript).',
+      en: 'Led the development and recovery of client systems alongside another developer. Rebuilt a critical school management application in 14 days, resolving backend and frontend issues (Node.js, Express, React, MongoDB). Additionally, designed and developed a multi-tenant SaaS platform for restaurant reservations, defining architecture, business logic, and scalability (Laravel, MySQL, React, TypeScript).'
+    },
+    technologies: ['Node.js', 'Express', 'React', 'MongoDB', 'Laravel', 'MySQL', 'TypeScript'],
+    image: '/freelance.jpeg'
+  },
+  {
+    id: 'exp-3',
+    role: {
       es: 'Backend Developer',
       en: 'Backend Developer'
     },
@@ -38,7 +56,7 @@ export const experiences: ExperienceItem[] = [
     image: '/telepagos_logo.jpeg'
   },
   {
-    id: 'exp-3',
+    id: 'exp-4',
     role: {
       es: 'Consultor IT',
       en: 'IT Consultant'
@@ -56,7 +74,7 @@ export const experiences: ExperienceItem[] = [
     image: '/itPoint_logo.jpeg'
   },
   {
-    id: 'exp-4',
+    id: 'exp-5',
     role: {
       es: 'Tutor Privado',
       en: 'Private Tutor'
@@ -70,10 +88,11 @@ export const experiences: ExperienceItem[] = [
       es: 'Tutor en desarrollo backend y full stack (Laravel, Node.js, React). Diseñé clases personalizadas enfocadas en resolución de problemas reales, buenas prácticas y arquitectura, mejorando la capacidad práctica de los estudiantes.',
       en: 'Tutor in backend and full stack development (Laravel, Node.js, React). Designed personalized lessons focused on real problem-solving, best practices, and architecture, improving students’ practical skills.'
     },
-    technologies: ['PHP', 'Laravel', 'Node.js', 'React', 'Vue.js']
+    technologies: ['PHP', 'Laravel', 'Node.js', 'React', 'Vue.js'],
+    image: '/tutoria.jpg'
   },
   {
-    id: 'exp-5',
+    id: 'exp-6',
     role: {
       es: 'Profesor Invitado en Desarrollo de Software',
       en: 'Guest Lecturer in Software Development'
@@ -92,7 +111,8 @@ export const experiences: ExperienceItem[] = [
       'API Design',
       'Mentoring',
       'Technical Communication'
-    ]
+    ],
+    image: '/orador.jpeg'
   }
 ];
 

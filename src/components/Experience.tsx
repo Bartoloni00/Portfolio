@@ -33,7 +33,7 @@ export default function Experience({ language, experiences }: ExperienceProps) {
               <div className="flex items-start gap-4">
                   {
                     exp.image ? (
-                      <img src={exp.image} alt={exp.company} className="w-8 h-8 object-contain rounded-lg flex-shrink-0 " />
+                      <img src={exp.image} alt={exp.company} className="w-16 h-16 object-contain rounded-lg flex-shrink-0 " />
                     ) : (
                 <div className="bg-primary-dark p-3 rounded-lg flex-shrink-0 text-neutral-900">
                       <Briefcase size={24} />
@@ -57,13 +57,13 @@ export default function Experience({ language, experiences }: ExperienceProps) {
             <div className="flex items-start gap-4">
               {
                     selectedExperience.image ? (
-                      <img src={selectedExperience.image} alt={selectedExperience.company} className="w-8 h-8 object-contain rounded-lg flex-shrink-0 " />
+                      <img src={selectedExperience.image} alt={selectedExperience.company} className="w-48 h-48 object-contain rounded-lg flex-shrink-0 " />
                     ) : (
                 <div className="bg-primary-dark p-3 rounded-lg flex-shrink-0 text-neutral-900">
                       <Briefcase size={24} />
                 </div>
                     )
-                  }
+              }
               <div className="flex-1">
                 <h2 className="text-3xl font-bold text-primary mb-2">{selectedExperience.role[language]}</h2>
                 <p className="text-xl text-text-secondary font-semibold">{selectedExperience.company}</p>

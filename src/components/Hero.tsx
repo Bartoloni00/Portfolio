@@ -1,5 +1,6 @@
-import { ArrowRight, ChevronDown } from 'lucide-react';
+import { ArrowRight, ChevronDown, FileDown } from 'lucide-react';
 import { Language } from '../types';
+import '../css/hero.css';
 
 interface HeroProps {
   language: Language;
@@ -12,12 +13,16 @@ export default function Hero({ language }: HeroProps) {
       en: "Hi, I'm",
     },
     role: {
-      es: 'Desarrollador FullStack | Backend',
-      en: 'FullStack | Backend Developer',
+      es: 'Backend Developer | Full Stack Engineer',
+      en: 'Backend Developer | Full Stack Engineer',
     },
     tagline: {
-      es: "Me destaco por construir APIs robustas y eficientes aplicando Clean Architecture,DDD, MVC y monolitos modulares, asegurando soluciones escalables y mantenibles. Trabajo principalmente con PHP, Laravel, Node.js, Express, Typescript y React, y me adapto con facilidad a nuevas tecnologías y entornos de desarrollo.",
-      en: "I excel at building robust and efficient APIs by applying Clean Architecture, DDD, MVC, and modular monoliths, ensuring scalable and maintainable solutions. I primarily work with PHP, Laravel, Node.js, Express, Typescript, and React, and I adapt easily to new technologies and development environments.",
+      es: "Desarrollo APIs robustas y sistemas backend escalables en entornos productivos complejos, especialmente en el sector financiero. Trabajo con Clean Architecture, DDD y monolitos modulares, participando en todo el ciclo de vida del software: diseño, desarrollo, integración, deploy e infraestructura en AWS. Utilizo principalmente Laravel, Node.js, TypeScript y React, y me adapto rápidamente a nuevos desafíos y tecnologías.",
+      en: "I build robust APIs and scalable backend systems in complex production environments, particularly in the financial sector. I work with Clean Architecture, DDD, and modular monoliths, contributing across the entire software lifecycle: design, development, integration, deployment, and AWS infrastructure. I primarily use Laravel, Node.js, TypeScript, and React, and quickly adapt to new challenges and technologies.",
+    },
+    cv: {
+      es: 'Descargar CV',
+      en: 'Download CV',
     },
     cta: {
       es: 'Ver mi trabajo',
@@ -48,9 +53,9 @@ export default function Hero({ language }: HeroProps) {
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-tight animate-slideInLeft delay-100">
                 Jonathan Abraham
                 <br />
-                <span className="text-primary">Bartoloni</span>
+                <span>Bartoloni</span>
               </h1>
-              <p className="text-2xl sm:text-3xl text-text-secondary font-semibold animate-slideInLeft delay-200">
+              <p className="text-2xl sm:text-3xl font-semibold animate-slideInLeft delay-200 text-primary">
                 {content.role[language]}
               </p>
             </div>
@@ -59,16 +64,24 @@ export default function Hero({ language }: HeroProps) {
               {content.tagline[language]}
             </p>
 
-            <button
-              onClick={handleScroll}
-              className="inline-flex items-center gap-2 px-8 py-4 bg-primary hover:bg-primary-dark text-neutral-900 font-bold rounded-lg transition-all transform hover:scale-105 shadow-card animate-slideInLeft delay-400"
-            >
-              {content.cta[language]}
-              <ArrowRight size={20} />
-            </button>
-          </div>
+            <div className="flex gap-4">
+              <button
+                onClick={handleScroll}
+                className="inline-flex items-center gap-2 px-6 py-3 border border-primary text-primary font-semibold rounded-lg transition-all hover:bg-primary/10"
+              >
+                {content.cv[language]}
+                <FileDown size={18} />
+              </button>
 
-          {/* Imagen */}
+              <button
+                onClick={handleScroll}
+                className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-neutral-900 font-bold rounded-lg shadow-lg transition-all transform hover:scale-105 hover:bg-primary-dark"
+              >
+                {content.cta[language]}
+                <ArrowRight size={20} />
+              </button>
+            </div>
+          </div>
           <div className="flex-1 max-w-md lg:max-w-lg">
             <div className="relative">
               <div className="absolute inset-0 bg-primary-dark rounded-2xl transform rotate-3 opacity-70 animate-pulse-slow" />
@@ -85,15 +98,19 @@ export default function Hero({ language }: HeroProps) {
       </div>
 
       {/* Flecha scroll */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <button
-          onClick={handleScroll}
-          className="p-2 rounded-full bg-primary hover:bg-primary-dark text-neutral-900 transition-colors shadow-card"
-          aria-label="Scroll down"
-        >
-          <ChevronDown size={24} />
-        </button>
-      </div>
+<div className="scroll-indicator absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center">
+  <span className="label bg-primary text-neutral-900 px-4 py-2 rounded-full mb-2">
+    Conoceme mas
+  </span>
+
+  <button
+    onClick={handleScroll}
+    className="arrow p-2 rounded-full bg-primary text-neutral-900 shadow-card"
+    aria-label="Scroll down"
+  >
+    <ChevronDown size={24} />
+  </button>
+</div>
     </section>
   );
 }

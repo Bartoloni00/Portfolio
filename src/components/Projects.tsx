@@ -35,9 +35,9 @@ export default function Projects({ language, projects }: ProjectsProps) {
             >
              {
                 project.image
-                ? <img src={project.image} alt={project.title[language]} className="w-full h-auto rounded-xl object-cover max-h-[170px]" /> 
+                ? <img src={project.image} alt={project.title[language]} className="w-full h-auto rounded-xl object-cover h-[170px] mb-5" /> 
                 :
-               <div className="bg-gradient-to-br from-primary to-primary-dark p-4 rounded-xl mb-5 flex items-center justify-center h-32 group-hover:scale-105 transition-transform">
+               <div className="bg-gradient-to-br from-primary to-primary-dark p-4 rounded-xl mb-5 flex items-center justify-center h-32 group-hover:scale-105 transition-transform h-[170px]">
                   <Code2 size={48} className="text-white drop-shadow-md" />
              </div>
              }
@@ -71,10 +71,18 @@ export default function Projects({ language, projects }: ProjectsProps) {
         {selectedProject && (
           <div className="space-y-6 text-text-primary">
             <div className="flex items-start gap-4">
-              <div className="bg-gradient-to-br from-primary to-primary-dark p-4 rounded-lg flex-shrink-0">
-                <Code2 size={32} className="text-white" />
-              </div>
-              <h2 className="text-3xl font-bold text-primary">{selectedProject.title[language]}</h2>
+                            {
+                    selectedProject.image ? (
+                      <img src={selectedProject.image} alt={selectedProject.title[language]} className="w-60 object-contain rounded-lg flex-shrink-0 " />
+                    ) : (
+                <div className="bg-primary-dark p-3 rounded-lg flex-shrink-0 text-neutral-900">
+                      <Code2 size={24} />
+                </div>
+                    )
+              }
+               <div className="flex-1">
+                  <h2 className="text-3xl font-bold text-primary">{selectedProject.title[language]}</h2>
+               </div>
             </div>
 
             <div className="border-t border-neutral-700 pt-6">
