@@ -14,18 +14,12 @@ export default function Contact({ language }: ContactProps) {
   };
 
   const socialLinks = [
-    { icon: Mail, href: 'mailto:bartoloniabraham@gmail.com', label: 'Email' },
+    { icon: Mail, img2: 'rrss/email.jpeg', href: 'mailto:bartoloniabraham@gmail.com', label: 'Email' },
     { img: 'rrss/linkedin.png', img2: 'rrss/linkedin2.png', href: 'https://www.linkedin.com/in/abraham-bartoloni/', label: 'LinkedIn' },
     { img: 'rrss/github.png', img2: 'rrss/github2.png', href: 'https://github.com/bartoloni00', label: 'GitHub' },
     { img: 'rrss/instagram.png', img2: 'rrss/instagram2.png', href: 'https://www.instagram.com/bartoloni00/', label: 'Instagram' },
-    { img: 'rrss/tik-tok.png', img2: 'rrss/tik-tok2.png', href: '#', label: 'TikTok' },
+    { img: 'rrss/tik-tok.png', img2: 'rrss/tik-tok2.png', href: 'https://www.tiktok.com/@bartoloni00', label: 'TikTok' },
   ];
-  const directions = {
-  github: "translate-x-full group-hover:translate-x-0",
-  linkedin: "translate-x-full group-hover:translate-x-0",
-  instagram: "-translate-y-full group-hover:translate-y-0",
-  tiktok: "translate-y-full group-hover:translate-y-0",
-};
 
   return (
     <section id="contact" className="relative py-20 text-text-primary overflow-hidden">
@@ -40,16 +34,37 @@ export default function Contact({ language }: ContactProps) {
   <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-4 gap-4 w-full">
 
   {/* EMAIL (col 1 - full height) */}
-  <a
-    href={socialLinks[0].href}
-    className="md:row-span-4 bg-neutral-800 p-6 rounded-2xl shadow-card flex flex-col justify-center items-center text-center hover:bg-neutral-700 transition-all group"
-  >
-    <Mail size={40} className="mb-4 text-primary group-hover:scale-110 transition-transform" />
-    <span className="text-xl font-bold">{socialLinks[0].label}</span>
-    <span className="text-sm text-text-secondary mt-2 break-all">
+<a
+  href={socialLinks[0].href}
+  title={socialLinks[0].label}
+  className="md:row-span-4 relative overflow-hidden rounded-2xl shadow-card group min-h-[140px] md:min-h-0"
+>
+  {/* imagen base */}
+  <img
+    src={socialLinks[0].img2}
+    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+  />
+
+  {/* overlay */}
+  <div className="absolute inset-0 bg-black/80 group-hover:bg-black/60 transition-all" />
+
+  {/* contenido */}
+  <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+    
+    <Mail
+      size={40}
+      className="text-white mb-4 transition-transform duration-300 group-hover:scale-110"
+    />
+
+    <span className="text-xl font-bold text-white">
+      {socialLinks[0].label}
+    </span>
+
+    <span className="text-sm text-white/80 mt-2 break-all opacity-0 group-hover:opacity-100 transition-all duration-300">
       {socialLinks[0].href.replace('mailto:', '')}
     </span>
-  </a>
+  </div>
+</a>
 
   {/* GITHUB (col 2, filas 1-2) */}
   <a
@@ -57,7 +72,7 @@ export default function Contact({ language }: ContactProps) {
     target="_blank"
     rel="noopener noreferrer"
     title={socialLinks[2].label}
-    className="md:row-span-2 relative overflow-hidden rounded-2xl shadow-card group"
+    className="md:row-span-2 relative overflow-hidden rounded-2xl shadow-card group min-h-[140px] md:min-h-0"
   >
     {/* imagen base */}
     <img
@@ -88,7 +103,7 @@ export default function Contact({ language }: ContactProps) {
   target="_blank"
   rel="noopener noreferrer"
   title={socialLinks[1].label}
-  className="md:row-span-2 relative overflow-hidden rounded-2xl shadow-card group"
+  className="md:row-span-2 relative overflow-hidden rounded-2xl shadow-card group min-h-[140px] md:min-h-0"
 >
   <img
     src={socialLinks[1].img}
@@ -115,7 +130,7 @@ export default function Contact({ language }: ContactProps) {
   target="_blank"
   rel="noopener noreferrer"
   title={socialLinks[3].label}
-  className="md:col-span-2 relative overflow-hidden rounded-2xl shadow-card group"
+  className="md:col-span-2 relative overflow-hidden rounded-2xl shadow-card group min-h-[140px] md:min-h-0"
 >
   <img
     src={socialLinks[3].img}
