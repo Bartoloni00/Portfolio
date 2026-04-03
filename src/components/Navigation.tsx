@@ -35,7 +35,7 @@ export default function Navigation({ language, onLanguageChange }: NavigationPro
               onClick={() => handleScroll('hero')}
               className="text-2xl font-bold text-white hover:text-honey transition-colors drop-shadow-sm"
             >
-              JAB
+              <img src="/favicon/logo.png" alt="JAB" className='max-w-12 max-h-12'/>
             </button>
           </div>
 

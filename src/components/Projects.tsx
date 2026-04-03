@@ -31,13 +31,13 @@ export default function Projects({ language, projects }: ProjectsProps) {
             <div
               key={project.id}
               onClick={() => setSelectedProject(project)}
-              className={`p-6 rounded-2xl shadow-card hover:shadow-2xl border border-transparent hover:border-primary transition-all transform hover:-translate-y-2 cursor-pointer animate-slideInUp delay-${index * 100}`}
+              className={`p-6 rounded-2xl shadow-card hover:shadow-2xl border border-neutral-800 hover:border-primary transition-all transform hover:-translate-y-1 cursor-pointer animate-slideInUp delay-${index * 100}`}
             >
              {
                 project.image
                 ? <img src={project.image} alt={project.title[language]} className="w-full h-auto rounded-xl object-cover h-[170px] mb-5" /> 
                 :
-               <div className="bg-gradient-to-br from-primary to-primary-dark p-4 rounded-xl mb-5 flex items-center justify-center h-32 group-hover:scale-105 transition-transform h-[170px]">
+               <div className="bg-gradient-to-br from-primary to-primary-dark p-4 rounded-xl mb-5 flex items-center justify-center h-32 group-hover:scale-102 transition-transform h-[170px]">
                   <Code2 size={48} className="text-white drop-shadow-md" />
              </div>
              }
