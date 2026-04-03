@@ -49,7 +49,7 @@ export default function Experience({ language, experiences }: ExperienceProps) {
                       <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5 mb-6">
                         {/* Logo o Icono Maletín */}
                         {exp.image ? (
-                          <img src={exp.image} alt={exp.company} className="w-16 h-16 object-contain rounded-2xl bg-white/5 p-2 flex-shrink-0" />
+                          <img src={exp.image} alt={exp.company} className="w-24 h-24 object-contain rounded-2xl p-2 flex-shrink-0" />
                         ) : (
                           <div className="bg-primary/10 p-5 rounded-2xl text-primary flex-shrink-0">
                             <Briefcase size={28} />
@@ -61,7 +61,7 @@ export default function Experience({ language, experiences }: ExperienceProps) {
                           <h3 className="text-2xl font-bold text-text-primary group-hover:text-primary transition-colors leading-tight">
                             {exp.role[language]}
                           </h3>
-                          <p className="text-lg text-text-secondary font-semibold mt-0.5">{exp.company}</p>
+                          <p className="text-lg text-text-secondary font-semibold mt-0.5">{exp.company} <span className='md:hidden text-sm'>{exp.period[language]}</span></p>
                         </div>
                       </div>
 
