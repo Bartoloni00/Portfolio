@@ -127,4 +127,19 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #0a0a0a; /* base */
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url('/textures/circuitBoard.png');
+  background-size: 500px;
+  background-repeat: repeat;
+  opacity: 0.1;
+  mix-blend-mode: overlay; /* magia */
+  pointer-events: none;
+  z-index: -1;
 }

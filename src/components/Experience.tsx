@@ -44,7 +44,7 @@ export default function Experience({ language, experiences }: ExperienceProps) {
                   <div className="w-full md:w-[calc(50%-40px)] animate-slideInUp" style={{ animationDelay: `${index * 150}ms` }}>
                     <div 
                       onClick={() => setSelectedExperience(exp)}
-                      className="bg-neutral-900 p-5 sm:p-6 md:p-8 rounded-3xl border border-neutral-800 hover:border-primary/40 transition-all duration-300 shadow-xl cursor-pointer transform hover:-translate-y-1.5"
+                      className="bg-neutral-900 p-5 sm:p-6 md:p-8 rounded-3xl border border-neutral-800 hover:border-primary/40 transition-all duration-300 shadow-xl cursor-pointer transform"
                     >
                       <div className="flex flex-col sm:flex-row items-center sm:items-start sm:items-center gap-4 mb-5">
                         {/* Logo o Icono Maletín */}
@@ -58,7 +58,7 @@ export default function Experience({ language, experiences }: ExperienceProps) {
                         
                         {/* Encabezado */}
                         <div className="text-center md:text-left">
-                          <h3 className="text-2xl font-bold text-text-primary group-hover:text-primary transition-colors leading-tight">
+                          <h3 className="text-2xl font-bold text-text-primary transition-colors leading-tight">
                             {exp.role[language]}
                           </h3>
 

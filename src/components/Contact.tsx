@@ -10,7 +10,8 @@ export default function Contact({ language }: ContactProps) {
   const content = {
     title: { es: 'Contacto', en: 'Contact' },
     subtitle: { es: 'Hablemos sobre tu próximo proyecto', en: "Let's talk about your next project" },
-    socialTitle: { es: 'Sígueme en', en: 'Follow me on' }
+    socialTitle: { es: 'Sígueme en', en: 'Follow me on' },
+    emailCTA: { es: 'Trabajemos juntos', en: 'Work with me' },
   };
 
   const socialLinks = [
@@ -56,9 +57,10 @@ export default function Contact({ language }: ContactProps) {
       className="text-white mb-4 transition-transform duration-300 group-hover:scale-110"
     />
 
-    <span className="text-xl font-bold text-white">
-      {socialLinks[0].label}
-    </span>
+    <p className="text-xl font-bold text-white flex items-center gap-2 flex-col">
+      <span>{socialLinks[0].label}</span>
+      <span>{content.emailCTA[language]}</span>
+    </p>
 
     <span className="text-sm text-white/80 mt-2 break-all opacity-0 group-hover:opacity-100 transition-all duration-300">
       {socialLinks[0].href.replace('mailto:', '')}

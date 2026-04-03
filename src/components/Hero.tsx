@@ -18,8 +18,8 @@ export default function Hero({ language }: HeroProps) {
       en: 'Backend Developer | Full Stack Engineer',
     },
     tagline: {
-      es: "Desarrollo APIs robustas y sistemas backend escalables en entornos productivos complejos, especialmente en el sector financiero. Trabajo con Clean Architecture, DDD y monolitos modulares, participando en todo el ciclo de vida del software: diseño, desarrollo, integración, deploy e infraestructura en AWS. Utilizo principalmente Laravel, Node.js, TypeScript y React, y me adapto rápidamente a nuevos desafíos y tecnologías.",
-      en: "I build robust APIs and scalable backend systems in complex production environments, particularly in the financial sector. I work with Clean Architecture, DDD, and modular monoliths, contributing across the entire software lifecycle: design, development, integration, deployment, and AWS infrastructure. I primarily use Laravel, Node.js, TypeScript, and React, and quickly adapt to new challenges and technologies.",
+      es: "Construyo sistemas escalables y APIs robustas que funcionan en producción real. Especializado en entornos complejos del sector financiero, aplico Clean Architecture, DDD y monolitos modulares para desarrollar soluciones mantenibles, performantes y listas para crecer. Participo en todo el ciclo: arquitectura, desarrollo, integración, deploy e infraestructura en AWS.",
+      en: "I build scalable systems and robust APIs that run in real production environments. Specialized in complex financial systems, I apply Clean Architecture, DDD, and modular monoliths to deliver maintainable, high-performance solutions ready to scale. I contribute across the entire lifecycle: architecture, development, integration, deployment, and AWS infrastructure.",
     },
     cv: {
       es: 'Descargar CV',
