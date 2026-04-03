@@ -117,7 +117,7 @@ export default function Hero({ language }: HeroProps) {
               <div className="absolute inset-0 bg-primary-dark rounded-2xl transform rotate-3 opacity-70 animate-pulse-slow" />
               <div className="relative bg-neutral-800 rounded-2xl p-2 shadow-card transform hover:rotate-0 transition-transform duration-300">
                 <img
-                  src="/image3.png"
+                  src="/hero.png"
                   alt="Jonathan Abraham Bartoloni"
                   className="w-full h-auto rounded-xl object-cover"
                 />

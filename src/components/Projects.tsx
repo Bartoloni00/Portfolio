@@ -31,7 +31,7 @@ export default function Projects({ language, projects }: ProjectsProps) {
             <div
               key={project.id}
               onClick={() => setSelectedProject(project)}
-              className={`bg-neutral-800 p-6 rounded-2xl shadow-card hover:shadow-2xl border border-transparent hover:border-primary transition-all transform hover:-translate-y-2 cursor-pointer animate-slideInUp delay-${index * 100}`}
+              className={`p-6 rounded-2xl shadow-card hover:shadow-2xl border border-transparent hover:border-primary transition-all transform hover:-translate-y-2 cursor-pointer animate-slideInUp delay-${index * 100}`}
             >
              {
                 project.image

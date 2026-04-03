@@ -31,7 +31,7 @@ export const experiences: ExperienceItem[] = [
       ]
     },
     technologies: ['Node.js', 'TypeScript', 'React', 'AWS', 'Lambda', 'DynamoDB', 'S3', 'CakePHP', 'Docker'],
-    image: '/syloper_logo.jpeg'
+    image: '/experience/syloper_logo.jpeg'
   },
   {
     id: 'exp-2',
@@ -63,7 +63,7 @@ export const experiences: ExperienceItem[] = [
       ]
     },
     technologies: ['Node.js', 'Express', 'React', 'MongoDB', 'Laravel', 'MySQL', 'TypeScript'],
-    image: '/freelance.jpeg'
+    image: '/experience/freelance.jpeg'
   },
   {
     id: 'exp-3',
@@ -93,7 +93,7 @@ export const experiences: ExperienceItem[] = [
       ]
     },
     technologies: ['PHP', 'Laravel', 'MySQL', 'Swagger', 'Docker'],
-    image: '/telepagos_logo.jpeg'
+    image: '/experience/telepagos_logo.jpeg'
   },
   {
     id: 'exp-4',
@@ -125,7 +125,7 @@ export const experiences: ExperienceItem[] = [
       ]
     },
     technologies: ['Windows', 'Linux', 'Hardware', 'Networking'],
-    image: '/itPoint_logo.jpeg'
+    image: '/experience/itPoint_logo.jpeg'
   },
   {
     id: 'exp-5',
@@ -155,7 +155,7 @@ export const experiences: ExperienceItem[] = [
       ]
     },
     technologies: ['PHP', 'Laravel', 'Node.js', 'React', 'Vue.js'],
-    image: '/tutoria.jpg'
+    image: '/experience/tutoria.jpg'
   },
   {
     id: 'exp-6',
@@ -188,7 +188,7 @@ export const experiences: ExperienceItem[] = [
       'Mentoring',
       'Technical Communication'
     ],
-    image: '/orador.jpeg'
+    image: '/experience/orador.jpeg'
   }
 ];
 
@@ -221,7 +221,7 @@ export const projects: ProjectItem[] = [
       github: 'https://github.com/Bartoloni00/HandyStock',
       demo: 'https://www.linkedin.com/posts/abraham-bartoloni_desarrollo-backend-reactjs-activity-7380942507389464576-4e-B?utm_source=share&utm_medium=member_desktop&rcm=ACoAADIriZAB9ygubIpVIL1xuh4Zn92BQUVjtYA'
     },
-    image: '/handystock.png'
+    image: '/projects/handystock.png'
   },
   {
     id: 'proj-2',
@@ -238,7 +238,7 @@ export const projects: ProjectItem[] = [
       github: 'https://github.com/Bartoloni00/EsmeraldaPresupuestos',
       demo: ''
     },
-    image: '/esmeralda.png'
+    image: '/projects/esmeralda.png'
   },
   {
     id: 'proj-3',
@@ -283,7 +283,7 @@ export const projects: ProjectItem[] = [
       github: 'https://github.com/Bartoloni00/barBrainDB',
       demo: 'https://vm.tiktok.com/ZMAXbvKND/'
     },
-    image: '/barbrain.png'
+    image: '/projects/barbrain.png'
   },
   {
     id: 'proj-5',
@@ -300,7 +300,7 @@ export const projects: ProjectItem[] = [
       github: 'https://github.com/Bartoloni00/hijitus-api',
       demo: ''
     },
-    image: '/hijitus2.png'
+    image: '/projects/hijitus2.png'
   },
   {
     id: 'proj-6',
