@@ -1,6 +1,7 @@
-import { ArrowRight, ChevronDown, FileDown } from 'lucide-react';
+import { ArrowRight, FileDown } from 'lucide-react';
 import { Language } from '../types';
 import '../css/hero.css';
+import { useState, useEffect } from 'react';
 
 interface HeroProps {
   language: Language;
@@ -32,12 +33,39 @@ export default function Hero({ language }: HeroProps) {
 
   const cvFile = language === 'es' ? '/cv/es-cv-abraham-bartoloni.pdf' : '/cv/en-cv-abraham-bartoloni.pdf';
 
-  const handleScroll = () => {
-    const element = document.getElementById('experience');
-    if (element) {
+  const [activeSection, setActiveSection] = useState('hero');
+  const [scrollProgress, setScrollProgress] = useState(0);
+  const sections = ['hero', 'experience', 'projects', 'contact'];
+
+
+  const handleScroll = (sectionId: string) => {
+  const element = document.getElementById(sectionId);
+  if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
+  useEffect(() => {
+    const handleScrollProgress = () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.body.scrollHeight - window.innerHeight;
+      const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      setScrollProgress(progress);
+
+      const current = sections.find((section) => {
+      const el = document.getElementById(section);
+      if (!el) return false;
+
+      const rect = el.getBoundingClientRect();
+      return rect.top <= 200 && rect.bottom >= 200;
+    });
+
+      if (current) setActiveSection(current);
+    };
+
+    window.addEventListener('scroll', handleScrollProgress);
+    return () => window.removeEventListener('scroll', handleScrollProgress);
+  }, []);
+
 
   return (
     <section
@@ -100,18 +128,30 @@ export default function Hero({ language }: HeroProps) {
       </div>
 
       {/* Flecha scroll */}
-<div className="scroll-indicator absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center">
-  <span className="label bg-primary text-neutral-900 px-4 py-2 rounded-full mb-2">
-    Conoceme mas
-  </span>
+<div className="hidden md:flex fixed right-6 top-1/2 -translate-y-1/2 z-50 flex flex-col items-center gap-4">
+  {/* Progress bar */}
+  <div className="w-1 h-40 bg-white/10 rounded-full overflow-hidden">
+    <div
+      className="bg-primary w-full transition-all duration-200"
+      style={{ height: `${scrollProgress}%` }}
+    />
+  </div>
 
-  <button
-    onClick={handleScroll}
-    className="arrow p-2 rounded-full bg-primary text-neutral-900 shadow-card"
-    aria-label="Scroll down"
-  >
-    <ChevronDown size={24} />
-  </button>
+  {/* Dots */}
+  <div className="flex flex-col gap-3">
+    {sections.map((section) => (
+      <button
+        title={section}
+        key={section}
+        onClick={() => handleScroll(section)}
+        className={`w-3 h-3 rounded-full transition-all duration-300 ${
+          activeSection === section
+            ? 'bg-primary scale-125 shadow-lg'
+            : 'bg-white/30 hover:bg-white/60'
+        }`}
+      />
+    ))}
+  </div>
 </div>
     </section>
   );

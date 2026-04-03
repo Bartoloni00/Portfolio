@@ -16,6 +16,20 @@ export const experiences: ExperienceItem[] = [
       es: 'Desarrollo full stack en plataformas financieras trabajando en todo el ciclo de vida del software (planning, desarrollo, deploy y debugging). Implemento soluciones backend y serverless con AWS (Lambda, DynamoDB, S3) e integro múltiples APIs externas y sistemas ERP. Gestiono autenticación basada en tokens y consistencia entre entornos. También participo en rediseños UX basados en Figma y en la mejora continua mediante code reviews, estimaciones y trabajo en equipo bajo Scrum.',
       en: 'Full stack development on financial platforms, covering the entire software lifecycle (planning, development, deployment, and debugging). I build backend and serverless solutions using AWS (Lambda, DynamoDB, S3) and integrate multiple external APIs and ERP systems. I manage token-based authentication and environment consistency. I also contribute to UX redesigns based on Figma and continuous improvement through code reviews, estimations, and Scrum teamwork.'
     },
+    items: {
+      es: [
+        'Desarrollo de soluciones serverless con AWS (Lambda, DynamoDB, S3).',
+        'Integración de sistemas ERP y múltiples APIs financieras externas.',
+        'Rediseño de interfaces UX colaborando directamente en Figma.',
+        'Liderazgo técnico en code reviews y optimización de flujos Scrum.'
+      ],
+      en: [
+        'Development of serverless solutions with AWS (Lambda, DynamoDB, S3).',
+        'Integration of ERP systems and multiple external financial APIs.',
+        'UX interface redesign collaborating directly in Figma.',
+        'Technical leadership in code reviews and Scrum workflow optimization.'
+      ]
+    },
     technologies: ['Node.js', 'TypeScript', 'React', 'AWS', 'Lambda', 'DynamoDB', 'S3', 'CakePHP', 'Docker'],
     image: '/syloper_logo.jpeg'
   },
@@ -33,6 +47,20 @@ export const experiences: ExperienceItem[] = [
     description: {
       es: 'Lideré el desarrollo y resolución de sistemas para clientes en conjunto con otro desarrollador. Recuperé una aplicación crítica de gestión escolar en 14 días, resolviendo fallas en backend y frontend (Node.js, Express, React, MongoDB). Además, diseñé y desarrollé una plataforma SaaS multitenant para gestión de reservas en restaurantes, definiendo arquitectura, lógica de negocio y escalabilidad (Laravel, MySQL, React, TypeScript).',
       en: 'Led the development and recovery of client systems alongside another developer. Rebuilt a critical school management application in 14 days, resolving backend and frontend issues (Node.js, Express, React, MongoDB). Additionally, designed and developed a multi-tenant SaaS platform for restaurant reservations, defining architecture, business logic, and scalability (Laravel, MySQL, React, TypeScript).'
+    },
+    items: {
+      es: [
+        'Recuperación de App de gestión escolar crítica en tiempo récord (14 días).',
+        'Arquitectura y desarrollo de plataforma SaaS multitenant para gastronomía.',
+        'Diseño de lógica de negocio escalable con Laravel y React.',
+        'Consultoría técnica para la resolución de fallas complejas en frontend y backend.'
+      ],
+      en: [
+        'Recovery of critical school management App in record time (14 days).',
+        'Architecture and development of a multi-tenant SaaS platform for gastronomy.',
+        'Scalable business logic design with Laravel and React.',
+        'Technical consultancy for resolving complex frontend and backend failures.'
+      ]
     },
     technologies: ['Node.js', 'Express', 'React', 'MongoDB', 'Laravel', 'MySQL', 'TypeScript'],
     image: '/freelance.jpeg'
@@ -52,6 +80,18 @@ export const experiences: ExperienceItem[] = [
       es: 'Diseñé e implementé módulos backend en Laravel aplicando Clean Architecture dentro de un monolito modular. Gestioné y optimicé una base de datos compleja (+200 tablas), resolviendo errores críticos y mejorando la estabilidad del sistema. Documenté y validé APIs con Swagger, facilitando la comunicación entre equipos. Participé en pair programming y mejoras continuas del código.',
       en: 'Designed and implemented backend modules in Laravel using Clean Architecture within a modular monolith. Managed and optimized a complex database (+200 tables), resolving critical issues and improving system stability. Documented and validated APIs with Swagger, enhancing team communication. Participated in pair programming and continuous code improvements.'
     },
+    items: {
+      es: [
+        'Optimización de base de datos relacional de alta complejidad (+200 tablas).',
+        'Implementación de Clean Architecture en un monolito modular con Laravel.',
+        'Documentación y validación integral de APIs utilizando Swagger.',
+      ],
+      en: [
+        'Optimization of highly complex relational database (+200 tables).',
+        'Clean Architecture implementation in a modular monolith with Laravel.',
+        'Comprehensive API documentation and validation using Swagger.',
+      ]
+    },
     technologies: ['PHP', 'Laravel', 'MySQL', 'Swagger', 'Docker'],
     image: '/telepagos_logo.jpeg'
   },
@@ -69,6 +109,20 @@ export const experiences: ExperienceItem[] = [
     description: {
       es: 'Optimización y mantenimiento de sistemas Windows y Linux, resolviendo fallas críticas y mejorando rendimiento. Administración de hardware y soporte técnico, con enfoque en estabilidad operativa. También participé en tareas de contenido digital y soporte a clientes.',
       en: 'Optimization and maintenance of Windows and Linux systems, resolving critical failures and improving performance. Hardware administration and technical support focused on operational stability. Also contributed to digital content and client support.'
+    },
+    items: {
+      es: [
+        'Mantenimiento preventivo y correctivo de entornos críticos Windows/Linux.',
+        'Administración de hardware y resolución de fallas de sistemas operativos.',
+        'Optimización de rendimiento en sistemas de usuarios finales.',
+        'Soporte técnico especializado.'
+      ],
+      en: [
+        'Preventive and corrective maintenance of critical Windows/Linux environments.',
+        'Hardware administration and operating system failure resolution.',
+        'Performance optimization in end-user systems.',
+        'Specialized technical support.'
+      ]
     },
     technologies: ['Windows', 'Linux', 'Hardware', 'Networking'],
     image: '/itPoint_logo.jpeg'
@@ -88,6 +142,18 @@ export const experiences: ExperienceItem[] = [
       es: 'Tutor en desarrollo backend y full stack (Laravel, Node.js, React). Diseñé clases personalizadas enfocadas en resolución de problemas reales, buenas prácticas y arquitectura, mejorando la capacidad práctica de los estudiantes.',
       en: 'Tutor in backend and full stack development (Laravel, Node.js, React). Designed personalized lessons focused on real problem-solving, best practices, and architecture, improving students’ practical skills.'
     },
+    items: {
+      es: [
+        'Diseño de clases prácticas basadas en resolución de problemas reales.',
+        'Enseñanza de patrones de diseño, arquitectura y buenas prácticas.',
+        'Mentoreo intensivo en el stack Laravel, Node.js y React.',
+      ],
+      en: [
+        'Design of practical lessons based on real-world problem solving.',
+        'Teaching design patterns, architecture, and best practices.',
+        'Intensive mentoring in the Laravel, Node.js, and React stack.',
+      ]
+    },
     technologies: ['PHP', 'Laravel', 'Node.js', 'React', 'Vue.js'],
     image: '/tutoria.jpg'
   },
@@ -105,6 +171,16 @@ export const experiences: ExperienceItem[] = [
     description: {
       es: 'Orador invitado presentando el ciclo de vida del desarrollo de software a +30 estudiantes. Enfoque en buenas prácticas, arquitectura y aplicación real del conocimiento.',
       en: 'Guest speaker presenting the software development lifecycle to 30+ students, focusing on best practices, architecture, and real-world application.'
+    },
+    items: {
+      es: [
+        'Orador principal para +30 estudiantes sobre estándares de la industria.',
+        'Presentación de flujos de trabajo profesionales y Clean Architecture.',
+      ],
+      en: [
+        'Keynote speaker for 30+ students on industry standards.',
+        'Presentation of professional workflows and Clean Architecture.',
+      ]
     },
     technologies: [
       'Software Architecture',

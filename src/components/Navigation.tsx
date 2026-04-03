@@ -63,9 +63,9 @@ export default function Navigation({ language, onLanguageChange }: NavigationPro
               <img
                 src={flagSrc}
                 alt={language === 'es' ? 'Español' : 'English'}
-                className="h-5 rounded-sm object-cover"
+                className="h-5 rounded-sm object-cover hover:text-yellow-500 transition-colors"
               />
-              {language === 'es' ? 'ES' : 'EN'}
+              {language === 'es' ? 'Español' : 'English'}
             </button>
           </div>
 
@@ -107,9 +107,9 @@ export default function Navigation({ language, onLanguageChange }: NavigationPro
               <img
                 src={flagSrc}
                 alt={language === 'es' ? 'Español' : 'English'}
-                className="h-5 rounded-sm object-cover"
+                className="h-5 rounded-sm object-cover hover:text-yellow-500 transition-colors"
               />
-              {language === 'es' ? 'ES' : 'EN '}
+              {language === 'es' ? 'ES' : 'EN'}
             </button>
           </div>
         </div>
