@@ -98,14 +98,14 @@ export default function Hero({ language }: HeroProps) {
              <a
                 href={cvFile}
                 download
-                className="inline-flex items-center gap-2 px-6 py-3 border border-primary text-primary font-semibold rounded-lg transition-all hover:bg-primary/10"
+                className="inline-flex items-center gap-2 text-sm md:text-base px-6 py-3 border border-primary text-primary font-semibold rounded-lg transition-all hover:bg-primary/10"
               >
                 {content.cv[language]}
                 <FileDown size={18} />
               </a>
               <button
                 onClick={handleScroll}
-                className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-neutral-900 font-bold rounded-lg shadow-lg transition-all transform hover:scale-105 hover:bg-primary-dark"
+                className="inline-flex items-center gap-2 text-sm md:text-base px-8 py-4 bg-primary text-neutral-900 font-bold rounded-lg shadow-lg transition-all transform hover:scale-105 hover:bg-primary-dark"
               >
                 {content.cta[language]}
                 <ArrowRight size={20} />

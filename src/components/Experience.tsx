@@ -44,9 +44,9 @@ export default function Experience({ language, experiences }: ExperienceProps) {
                   <div className="w-full md:w-[calc(50%-40px)] animate-slideInUp" style={{ animationDelay: `${index * 150}ms` }}>
                     <div 
                       onClick={() => setSelectedExperience(exp)}
-                      className="bg-neutral-900 p-8 rounded-3xl border border-neutral-800 hover:border-primary/40 transition-all duration-300 shadow-xl cursor-pointer transform hover:-translate-y-1.5"
+                      className="bg-neutral-900 p-5 sm:p-6 md:p-8 rounded-3xl border border-neutral-800 hover:border-primary/40 transition-all duration-300 shadow-xl cursor-pointer transform hover:-translate-y-1.5"
                     >
-                      <div className="flex flex-col sm:flex-row items-start sm:items-center gap-5 mb-6">
+                      <div className="flex flex-col sm:flex-row items-center sm:items-start sm:items-center gap-4 mb-5">
                         {/* Logo o Icono Maletín */}
                         {exp.image ? (
                           <img src={exp.image} alt={exp.company} className="w-24 h-24 object-contain rounded-2xl p-2 flex-shrink-0" />
@@ -57,18 +57,25 @@ export default function Experience({ language, experiences }: ExperienceProps) {
                         )}
                         
                         {/* Encabezado */}
-                        <div>
+                        <div className="text-center md:text-left">
                           <h3 className="text-2xl font-bold text-text-primary group-hover:text-primary transition-colors leading-tight">
                             {exp.role[language]}
                           </h3>
-                          <p className="text-lg text-text-secondary font-semibold mt-0.5">{exp.company} <span className='md:hidden text-sm'>{exp.period[language]}</span></p>
+
+                          <p className="text-lg text-text-secondary font-semibold mt-0.5">
+                            {exp.company}
+                          </p>
+
+                          <p className="text-sm text-primary/80 font-semibold mt-1 md:hidden">
+                            {exp.period[language]}
+                          </p>
                         </div>
                       </div>
 
                       {/* UX: Logros Clave (Items) - Lista de puntos */}
                       <ul className="space-y-3.5 mb-7 text-text-secondary">
                         {exp.items?.[language].slice(0, 3).map((item, i) => (
-                          <li key={i} className="flex items-start gap-3 text-base leading-relaxed">
+                          <li key={i} className="flex items-start gap-3 text-sm sm:text-base leading-relaxed">
                             {/* Punto Amarillo Minimalista */}
                             <div className="w-2 h-2 rounded-full bg-primary mt-2.5 flex-shrink-0" />
                             <span>{item}</span>
