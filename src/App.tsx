@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
+import TechStack from './components/TechStack';
 import { Language } from './types';
 import { experiences, projects } from './data';
 
@@ -14,6 +15,7 @@ function App() {
     <div className="min-h-screen text-text-primary">
       <Navigation language={language} onLanguageChange={setLanguage} />
       <Hero language={language} />
+      <TechStack language={language} />
       <Experience language={language} experiences={experiences} />
       <Projects language={language} projects={projects} />
       <Contact language={language} />
