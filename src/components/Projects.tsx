@@ -70,19 +70,19 @@ export default function Projects({ language, projects }: ProjectsProps) {
       <Modal isOpen={!!selectedProject} onClose={() => setSelectedProject(null)}>
         {selectedProject && (
           <div className="space-y-6 text-text-primary">
-            <div className="flex items-start gap-4">
-                            {
+            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+              {
                     selectedProject.image ? (
-                      <img src={selectedProject.image} alt={selectedProject.title[language]} className="w-60 object-contain rounded-lg flex-shrink-0 " />
+                      <img src={selectedProject.image} alt={selectedProject.title[language]} className="w-full sm:w-60 object-contain rounded-2xl p-2 bg-neutral-800/50 flex-shrink-0" />
                     ) : (
-                <div className="bg-primary-dark p-3 rounded-lg flex-shrink-0 text-neutral-900">
-                      <Code2 size={24} />
+                <div className="bg-primary/10 p-6 rounded-2xl text-primary flex-shrink-0">
+                      <Code2 size={32} />
                 </div>
                     )
               }
-               <div className="flex-1">
-                  <h2 className="text-3xl font-bold text-primary">{selectedProject.title[language]}</h2>
-               </div>
+              <div className="flex-1 text-center sm:text-left">
+                <h2 className="text-3xl font-bold text-primary">{selectedProject.title[language]}</h2>
+              </div>
             </div>
 
             <div className="border-t border-neutral-700 pt-6">

@@ -120,17 +120,17 @@ export default function Experience({ language, experiences }: ExperienceProps) {
       <Modal isOpen={!!selectedExperience} onClose={() => setSelectedExperience(null)}>
         {selectedExperience && (
           <div className="space-y-6 text-text-primary">
-            <div className="flex items-start gap-4">
+            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
               {
                     selectedExperience.image ? (
-                      <img src={selectedExperience.image} alt={selectedExperience.company} className="w-48 h-48 object-contain rounded-lg flex-shrink-0 " />
+                      <img src={selectedExperience.image} alt={selectedExperience.company} className="w-40 h-40 sm:w-48 sm:h-48 object-contain rounded-2xl p-2 bg-neutral-800/50 flex-shrink-0" />
                     ) : (
-                <div className="bg-primary-dark p-3 rounded-lg flex-shrink-0 text-neutral-900">
-                      <Briefcase size={24} />
+                <div className="bg-primary/10 p-6 rounded-2xl text-primary flex-shrink-0">
+                      <Briefcase size={32} />
                 </div>
                     )
               }
-              <div className="flex-1">
+              <div className="flex-1 text-center sm:text-left">
                 <h2 className="text-3xl font-bold text-primary mb-2">{selectedExperience.role[language]}</h2>
                 <p className="text-xl text-text-secondary font-semibold">{selectedExperience.company}</p>
                 <p className="text-text-secondary mt-1 opacity-80">{selectedExperience.period[language]}</p>
