@@ -151,28 +151,27 @@ export default function Hero({ language }: HeroProps) {
 
               <div className="absolute inset-0 bg-primary-dark rounded-2xl transform rotate-3 opacity-70 animate-pulse-slow group-hover/hero-card:rotate-2 transition-transform duration-700" />
 
-              <button 
+              <button
                 onClick={() => setCurrentImage(prev => prev === 0 ? 1 : 0)}
                 className="relative w-full bg-neutral-800 rounded-2xl p-2 shadow-card transform hover:rotate-0 transition-all duration-700 overflow-hidden cursor-rotate group-hover/hero-card:scale-[1.01] group-hover/hero-card:shadow-primary/20 select-none active:scale-95 text-left"
                 aria-label={language === 'es' ? 'Cambiar foto de perfil' : 'Change profile picture'}
               >
                 <div className="relative aspect-[4/5] sm:aspect-square lg:aspect-[4/5] overflow-hidden rounded-xl">
                   <img
-                    src="/hero1.png"
+                    src="/hero1.webp"
                     alt="Jonathan Abraham Bartoloni"
                     width="600"
                     height="750"
-                    fetchpriority="high"
                     className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[1500ms] ease-in-out ${currentImage === 0 ? 'opacity-100' : 'opacity-0'}`}
                   />
                   <img
-                    src="/hero.png"
+                    src="/hero.webp"
                     alt="Jonathan Abraham Bartoloni - alternate"
                     width="600"
                     height="750"
                     className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[1500ms] ease-in-out ${currentImage === 1 ? 'opacity-100' : 'opacity-0'}`}
                   />
-                  
+
                   {/* Tooltip Badge */}
                   <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-primary/90 text-neutral-900 px-4 py-2 rounded-full text-xs font-bold flex items-center gap-2 opacity-0 group-hover/hero-card:opacity-100 transition-all duration-300 shadow-xl backdrop-blur-md pointer-events-none z-20 translate-y-2 group-hover/hero-card:translate-y-0">
                     <RotateCcw size={14} className="animate-spin-slow" />

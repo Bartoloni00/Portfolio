@@ -15,11 +15,11 @@ export default function Contact({ language }: ContactProps) {
   };
 
   const socialLinks = [
-    { icon: Mail, img2: 'rrss/email.jpeg', href: 'mailto:bartoloniabraham@gmail.com', label: 'Email' },
-    { img: 'rrss/linkedin.png', img2: 'rrss/linkedin2.png', href: 'https://www.linkedin.com/in/abraham-bartoloni/', label: 'LinkedIn' },
-    { img: 'rrss/github.png', img2: 'rrss/github3.png', href: 'https://github.com/bartoloni00', label: 'GitHub' },
-    { img: 'rrss/instagram.png', img2: 'rrss/instagram2.png', href: 'https://www.instagram.com/bartoloni00/', label: 'Instagram' },
-    { img: 'rrss/tiktok.avif', img2: 'rrss/tik-tok3.png', href: 'https://www.tiktok.com/@bartoloni003', label: 'TikTok' },
+    { icon: Mail, img2: 'rrss/email.webp', href: 'mailto:bartoloniabraham@gmail.com', label: 'Email' },
+    { img: 'rrss/linkedin.webp', img2: 'rrss/linkedin2.webp', href: 'https://www.linkedin.com/in/abraham-bartoloni/', label: 'LinkedIn' },
+    { img: 'rrss/github.webp', img2: 'rrss/github3.webp', href: 'https://github.com/bartoloni00', label: 'GitHub' },
+    { img: 'rrss/instagram.webp', img2: 'rrss/instagram2.webp', href: 'https://www.instagram.com/bartoloni00/', label: 'Instagram' },
+    { img: 'rrss/tiktok.avif', img2: 'rrss/tik-tok3.webp', href: 'https://www.tiktok.com/@bartoloni003', label: 'TikTok' },
   ];
 
   return (
