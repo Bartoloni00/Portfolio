@@ -104,7 +104,7 @@ export default function Hero({ language }: HeroProps) {
                 <FileDown size={18} />
               </a>
               <button
-                onClick={handleScroll}
+                onClick={() => handleScroll('projects')}
                 className="inline-flex items-center gap-2 text-sm md:text-base px-8 py-4 bg-primary text-neutral-900 font-bold rounded-lg shadow-lg transition-all transform hover:scale-105 hover:bg-primary-dark"
               >
                 {content.cta[language]}
