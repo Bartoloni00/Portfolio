@@ -84,20 +84,15 @@ export default function Experience({ language, experiences }: ExperienceProps) {
                       </ul>
 
                       {/* Pie de Tarjeta - Tech y Link */}
-                      <div className="flex items-center justify-between mt-5 pt-5 border-t border-neutral-800/60">
-                        <div className="flex flex-wrap gap-1.5 max-w-[70%]">
-                          {exp.technologies.slice(0, 3).map(tech => (
-                            <span key={tech} className="text-xs px-2.5 py-1 bg-neutral-800 rounded-md text-text-secondary font-medium">
+                      <div className="flex items-center justify-between mt-5 pt-5 border-t border-neutral-800/60 gap-4">
+                        <div className="flex flex-wrap gap-1.5 h-7 overflow-hidden flex-1">
+                          {exp.technologies.slice(0, 6).map(tech => (
+                            <span key={tech} className="text-xs px-2.5 py-1 bg-neutral-800 rounded-md text-text-secondary font-medium whitespace-nowrap">
                               {tech}
                             </span>
                           ))}
-                          {exp.technologies.length > 3 && (
-                            <span className="text-xs px-2 py-1 text-text-secondary/60">
-                              +{exp.technologies.length - 3}
-                            </span>
-                          )}
                         </div>
-                        <span className="text-sm font-bold text-primary group-hover:underline whitespace-nowrap">
+                        <span className="text-sm font-bold text-primary group-hover:underline whitespace-nowrap flex-shrink-0">
                           {content.details[language]} →
                         </span>
                       </div>

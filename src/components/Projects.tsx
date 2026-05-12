@@ -31,23 +31,23 @@ export default function Projects({ language, projects }: ProjectsProps) {
             <div
               key={project.id}
               onClick={() => setSelectedProject(project)}
-              className={`p-6 rounded-2xl shadow-card hover:shadow-2xl border border-neutral-800 hover:border-primary transition-all transform hover:-translate-y-1 cursor-pointer animate-slideInUp delay-${index * 100}`}
+              className={`p-6 rounded-2xl shadow-card hover:shadow-2xl border border-neutral-800 hover:border-primary transition-all transform hover:-translate-y-1 cursor-pointer animate-slideInUp delay-${index * 100} flex flex-col`}
             >
              {
                 project.image
-                ? <img src={project.image} alt={project.title[language]} className="w-full h-auto rounded-xl object-cover h-[170px] mb-5" /> 
+                ? <img src={project.image} alt={project.title[language]} className="w-full h-[180px] rounded-xl object-cover mb-5" /> 
                 :
-               <div className="bg-gradient-to-br from-primary to-primary-dark p-4 rounded-xl mb-5 flex items-center justify-center h-32 group-hover:scale-102 transition-transform h-[170px]">
+               <div className="bg-gradient-to-br from-primary to-primary-dark p-4 rounded-xl mb-5 flex items-center justify-center h-[180px] group-hover:scale-102 transition-transform">
                   <Code2 size={48} className="text-white drop-shadow-md" />
              </div>
              }
-              <h3 className="text-xl font-semibold text-text-primary mb-2 group-hover:text-primary transition-colors">
+              <h3 className="text-xl font-semibold text-text-primary mb-2 group-hover:text-primary transition-colors min-h-[3.5rem] flex items-center">
                 {project.title[language]}
               </h3>
-              <p className="text-gray-400 line-clamp-3 leading-relaxed group-hover:text-gray-300 transition-colors">
+              <p className="text-gray-400 line-clamp-3 leading-relaxed group-hover:text-gray-300 transition-colors min-h-[4.5rem]">
                 {project.description[language]}
               </p>
-              <div className="mt-5 flex flex-wrap gap-2">
+              <div className="mt-auto pt-5 flex flex-wrap gap-2 min-h-[2.5rem] content-start">
                 {project.techStack.slice(0, 3).map((tech) => (
                   <span
                     key={tech}
