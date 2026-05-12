@@ -1,4 +1,4 @@
-import { ArrowRight, FileDown } from 'lucide-react';
+import { ArrowRight, FileDown, RotateCcw } from 'lucide-react';
 import { Language } from '../types';
 import '../css/hero.css';
 import { useState, useEffect, useRef } from 'react';
@@ -165,6 +165,12 @@ export default function Hero({ language }: HeroProps) {
                     alt="Jonathan Abraham Bartoloni - alternate"
                     className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[1500ms] ease-in-out ${currentImage === 1 ? 'opacity-100' : 'opacity-0'}`}
                   />
+                  
+                  {/* Tooltip Badge */}
+                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-primary/90 text-neutral-900 px-4 py-2 rounded-full text-xs font-bold flex items-center gap-2 opacity-0 group-hover/hero-card:opacity-100 transition-all duration-300 shadow-xl backdrop-blur-md pointer-events-none z-20 translate-y-2 group-hover/hero-card:translate-y-0">
+                    <RotateCcw size={14} className="animate-spin-slow" />
+                    {language === 'es' ? 'Click para cambiar' : 'Click to switch'}
+                  </div>
                 </div>
               </div>
             </div>
