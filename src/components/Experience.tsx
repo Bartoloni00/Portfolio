@@ -44,12 +44,28 @@ export default function Experience({ language, experiences }: ExperienceProps) {
                   <div className="w-full md:w-[calc(50%-40px)] animate-slideInUp" style={{ animationDelay: `${index * 150}ms` }}>
                     <div 
                       onClick={() => setSelectedExperience(exp)}
-                      className="p-5 sm:p-6 md:p-8 rounded-3xl border border-neutral-800 hover:border-primary/40 transition-all duration-300 shadow-xl cursor-pointer transform"
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                          e.preventDefault();
+                          setSelectedExperience(exp);
+                        }
+                      }}
+                      role="button"
+                      tabIndex={0}
+                      aria-label={language === 'es' ? `Ver detalles de mi experiencia en ${exp.company}` : `View details of my experience at ${exp.company}`}
+                      className="p-5 sm:p-6 md:p-8 rounded-3xl border border-neutral-800 hover:border-primary/40 transition-all duration-300 shadow-xl cursor-pointer transform text-left w-full"
                     >
                       <div className="flex flex-col sm:flex-row items-center sm:items-start sm:items-center gap-4 mb-5">
                         {/* Logo o Icono Maletín */}
                         {exp.image ? (
-                          <img src={exp.image} alt={exp.company} className="w-24 h-24 object-contain rounded-2xl p-2 flex-shrink-0" />
+                          <img 
+                            src={exp.image} 
+                            alt={exp.company} 
+                            width="96"
+                            height="96"
+                            loading="lazy"
+                            className="w-24 h-24 object-contain rounded-2xl p-2 flex-shrink-0" 
+                          />
                         ) : (
                           <div className="bg-primary/10 p-5 rounded-2xl text-primary flex-shrink-0">
                             <Briefcase size={28} />
@@ -117,13 +133,19 @@ export default function Experience({ language, experiences }: ExperienceProps) {
         </div>
       </div>
 
-      <Modal isOpen={!!selectedExperience} onClose={() => setSelectedExperience(null)}>
+      <Modal isOpen={!!selectedExperience} onClose={() => setSelectedExperience(null)} language={language}>
         {selectedExperience && (
           <div className="space-y-6 text-text-primary">
             <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
               {
                     selectedExperience.image ? (
-                      <img src={selectedExperience.image} alt={selectedExperience.company} className="w-40 h-40 sm:w-48 sm:h-48 object-contain rounded-2xl p-2 bg-neutral-800/50 flex-shrink-0" />
+                      <img 
+                        src={selectedExperience.image} 
+                        alt={selectedExperience.company} 
+                        width="192"
+                        height="192"
+                        className="w-40 h-40 sm:w-48 sm:h-48 object-contain rounded-2xl p-2 bg-neutral-800/50 flex-shrink-0" 
+                      />
                     ) : (
                 <div className="bg-primary/10 p-6 rounded-2xl text-primary flex-shrink-0">
                       <Briefcase size={32} />

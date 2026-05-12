@@ -31,11 +31,27 @@ export default function Projects({ language, projects }: ProjectsProps) {
             <div
               key={project.id}
               onClick={() => setSelectedProject(project)}
-              className={`p-6 rounded-2xl shadow-card hover:shadow-2xl border border-neutral-800 hover:border-primary transition-all transform hover:-translate-y-1 cursor-pointer animate-slideInUp delay-${index * 100} flex flex-col`}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  setSelectedProject(project);
+                }
+              }}
+              role="button"
+              tabIndex={0}
+              aria-label={language === 'es' ? `Ver detalles del proyecto ${project.title.es}` : `View details for project ${project.title.en}`}
+              className={`p-6 rounded-2xl shadow-card hover:shadow-2xl border border-neutral-800 hover:border-primary transition-all transform hover:-translate-y-1 cursor-pointer animate-slideInUp delay-${index * 100} flex flex-col text-left w-full`}
             >
              {
                 project.image
-                ? <img src={project.image} alt={project.title[language]} className="w-full h-[180px] rounded-xl object-cover mb-5" /> 
+                ? <img 
+                    src={project.image} 
+                    alt={project.title[language]} 
+                    width="400"
+                    height="180"
+                    loading="lazy"
+                    className="w-full h-[180px] rounded-xl object-cover mb-5" 
+                  /> 
                 :
                <div className="bg-gradient-to-br from-primary to-primary-dark p-4 rounded-xl mb-5 flex items-center justify-center h-[180px] group-hover:scale-102 transition-transform">
                   <Code2 size={48} className="text-white drop-shadow-md" />
@@ -67,13 +83,19 @@ export default function Projects({ language, projects }: ProjectsProps) {
         </div>
       </div>
 
-      <Modal isOpen={!!selectedProject} onClose={() => setSelectedProject(null)}>
+      <Modal isOpen={!!selectedProject} onClose={() => setSelectedProject(null)} language={language}>
         {selectedProject && (
           <div className="space-y-6 text-text-primary">
             <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
               {
                     selectedProject.image ? (
-                      <img src={selectedProject.image} alt={selectedProject.title[language]} className="w-full sm:w-60 object-contain rounded-2xl p-2 bg-neutral-800/50 flex-shrink-0" />
+                      <img 
+                        src={selectedProject.image} 
+                        alt={selectedProject.title[language]} 
+                        width="240"
+                        height="300"
+                        className="w-full sm:w-60 object-contain rounded-2xl p-2 bg-neutral-800/50 flex-shrink-0" 
+                      />
                     ) : (
                 <div className="bg-primary/10 p-6 rounded-2xl text-primary flex-shrink-0">
                       <Code2 size={32} />

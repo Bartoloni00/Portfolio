@@ -1,13 +1,15 @@
 import { X } from 'lucide-react';
 import { useEffect } from 'react';
+import { Language } from '../types';
 
 interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
   children: React.ReactNode;
+  language: Language;
 }
 
-export default function Modal({ isOpen, onClose, children }: ModalProps) {
+export default function Modal({ isOpen, onClose, children, language }: ModalProps) {
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -49,7 +51,7 @@ export default function Modal({ isOpen, onClose, children }: ModalProps) {
           <button
             onClick={onClose}
             className="p-2 hover:bg-primary-dark rounded-full transition-colors text-text-primary"
-            aria-label="Close modal"
+            aria-label={language === 'es' ? 'Cerrar modal' : 'Close modal'}
           >
             <X size={24} />
           </button>
