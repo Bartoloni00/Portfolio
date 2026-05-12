@@ -26,7 +26,7 @@ export default function Navigation({ language, onLanguageChange }: NavigationPro
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-onyx/95 backdrop-blur-sm shadow-lg z-40 border-b border-sand/10 transition-all duration-300">
+    <nav className="fixed top-0 left-0 right-0 bg-onyx/95 backdrop-blur-xl shadow-lg z-40 border-b border-sand/10 transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}

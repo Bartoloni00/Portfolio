@@ -19,7 +19,7 @@ export default function Contact({ language }: ContactProps) {
     { img: 'rrss/linkedin.png', img2: 'rrss/linkedin2.png', href: 'https://www.linkedin.com/in/abraham-bartoloni/', label: 'LinkedIn' },
     { img: 'rrss/github.png', img2: 'rrss/github3.png', href: 'https://github.com/bartoloni00', label: 'GitHub' },
     { img: 'rrss/instagram.png', img2: 'rrss/instagram2.png', href: 'https://www.instagram.com/bartoloni00/', label: 'Instagram' },
-    { img: 'rrss/tik-tok.png', img2: 'rrss/tik-tok3.png', href: 'https://www.tiktok.com/@bartoloni003', label: 'TikTok' },
+    { img: 'rrss/tiktok.avif', img2: 'rrss/tik-tok3.png', href: 'https://www.tiktok.com/@bartoloni003', label: 'TikTok' },
   ];
 
   return (
