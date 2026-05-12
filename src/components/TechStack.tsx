@@ -15,6 +15,8 @@ export default function TechStack({ language }: TechStackProps) {
     { name: 'MySQL', icon: 'mysql', url: 'https://www.mysql.com/' },
     { name: 'React', icon: 'react', url: 'https://react.dev/' },
     { name: 'TypeScript', icon: 'typescript', url: 'https://www.typescriptlang.org/' },
+    { name: 'Docker', icon: 'docker', url: 'https://www.docker.com/' },
+    { name: 'Linux', icon: 'linux', url: 'https://www.linux.org/' },
   ];
 
   return (
