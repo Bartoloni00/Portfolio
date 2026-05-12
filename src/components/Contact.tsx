@@ -15,11 +15,11 @@ export default function Contact({ language }: ContactProps) {
   };
 
   const socialLinks = [
-    { icon: Mail, img2: 'rrss/email.jpeg', href: 'mailto:bartoloniabraham@gmail.com', label: 'Email' },
-    { img: 'rrss/linkedin.png', img2: 'rrss/linkedin2.png', href: 'https://www.linkedin.com/in/abraham-bartoloni/', label: 'LinkedIn' },
-    { img: 'rrss/github.png', img2: 'rrss/github3.png', href: 'https://github.com/bartoloni00', label: 'GitHub' },
-    { img: 'rrss/instagram.png', img2: 'rrss/instagram2.png', href: 'https://www.instagram.com/bartoloni00/', label: 'Instagram' },
-    { img: 'rrss/tik-tok.png', img2: 'rrss/tik-tok3.png', href: 'https://www.tiktok.com/@bartoloni003', label: 'TikTok' },
+    { icon: Mail, img2: 'rrss/email.webp', href: 'mailto:bartoloniabraham@gmail.com', label: 'Email' },
+    { img: 'rrss/linkedin.webp', img2: 'rrss/linkedin2.webp', href: 'https://www.linkedin.com/in/abraham-bartoloni/', label: 'LinkedIn' },
+    { img: 'rrss/github.webp', img2: 'rrss/github3.webp', href: 'https://github.com/bartoloni00', label: 'GitHub' },
+    { img: 'rrss/instagram.webp', img2: 'rrss/instagram2.webp', href: 'https://www.instagram.com/bartoloni00/', label: 'Instagram' },
+    { img: 'rrss/tiktok.avif', img2: 'rrss/tik-tok3.webp', href: 'https://www.tiktok.com/@bartoloni003', label: 'TikTok' },
   ];
 
   return (
@@ -37,12 +37,13 @@ export default function Contact({ language }: ContactProps) {
           {/* EMAIL (col 1 - full height) */}
           <a
             href={socialLinks[0].href}
-            title={socialLinks[0].label}
+            aria-label={language === 'es' ? 'Enviar correo electrónico' : 'Send an email'}
             className="md:row-span-4 relative overflow-hidden rounded-2xl shadow-card group min-h-[140px] md:min-h-0"
           >
             {/* imagen base */}
             <img
               src={socialLinks[0].img2}
+              alt={language === 'es' ? 'Fondo de contacto por email' : 'Email contact background'}
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
             />
 
@@ -73,18 +74,20 @@ export default function Contact({ language }: ContactProps) {
             href={socialLinks[2].href}
             target="_blank"
             rel="noopener noreferrer"
-            title={socialLinks[2].label}
+            aria-label={language === 'es' ? 'Ver mi perfil de GitHub' : 'View my GitHub profile'}
             className="md:row-span-2 relative overflow-hidden rounded-2xl shadow-card group min-h-[140px] md:min-h-0"
           >
             {/* imagen base */}
             <img
               src={socialLinks[2].img}
+              alt="GitHub Logo"
               className="absolute inset-0 w-full h-full object-cover"
             />
 
             {/* hover slide (derecha → izquierda) */}
             <img
               src={socialLinks[2].img2}
+              alt="GitHub Profile Preview"
               className="absolute inset-0 w-full h-full object-cover translate-x-full group-hover:translate-x-0 transition-all duration-500 ease-out"
             />
 
@@ -104,16 +107,18 @@ export default function Contact({ language }: ContactProps) {
             href={socialLinks[1].href}
             target="_blank"
             rel="noopener noreferrer"
-            title={socialLinks[1].label}
+            aria-label={language === 'es' ? 'Ver mi perfil de LinkedIn' : 'View my LinkedIn profile'}
             className="md:row-span-2 relative overflow-hidden rounded-2xl shadow-card group min-h-[140px] md:min-h-0"
           >
             <img
               src={socialLinks[1].img}
+              alt="LinkedIn Logo"
               className="absolute inset-0 w-full h-full object-cover"
             />
 
             <img
               src={socialLinks[1].img2}
+              alt="LinkedIn Profile Preview"
               className="absolute inset-0 w-full h-full object-cover translate-x-full group-hover:translate-x-0 transition-all duration-500 ease-out"
             />
 
@@ -131,16 +136,18 @@ export default function Contact({ language }: ContactProps) {
             href={socialLinks[3].href}
             target="_blank"
             rel="noopener noreferrer"
-            title={socialLinks[3].label}
+            aria-label={language === 'es' ? 'Ver mi perfil de Instagram' : 'View my Instagram profile'}
             className="md:col-span-2 relative overflow-hidden rounded-2xl shadow-card group min-h-[140px] md:min-h-0"
           >
             <img
               src={socialLinks[3].img}
+              alt="Instagram Logo"
               className="absolute inset-0 w-full h-full object-cover"
             />
 
             <img
               src={socialLinks[3].img2}
+              alt="Instagram Profile Preview"
               className="absolute inset-0 w-full h-full object-cover -translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-out"
             />
 
@@ -158,16 +165,18 @@ export default function Contact({ language }: ContactProps) {
             href={socialLinks[4].href}
             target="_blank"
             rel="noopener noreferrer"
-            title={socialLinks[4].label}
+            aria-label={language === 'es' ? 'Ver mi perfil de TikTok' : 'View my TikTok profile'}
             className="md:col-span-2 relative overflow-hidden rounded-2xl shadow-card group min-h-[140px]"
           >
             <img
               src={socialLinks[4].img}
+              alt="TikTok Logo"
               className="absolute inset-0 w-full h-full object-cover"
             />
 
             <img
               src={socialLinks[4].img2}
+              alt="TikTok Profile Preview"
               className="absolute inset-0 w-full h-full object-cover translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-out"
             />
 

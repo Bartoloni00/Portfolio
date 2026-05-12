@@ -101,7 +101,7 @@ export default function Hero({ language }: HeroProps) {
     <section
       id="hero"
       ref={heroRef}
-      className="min-h-screen relative overflow-hidden text-text-primary pt-16">
+      className="min-h-screen relative overflow-x-hidden text-text-primary pt-16">
       {/* Contenido principal */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between min-h-[calc(100vh-4rem)] py-12 gap-12">
@@ -137,42 +137,48 @@ export default function Hero({ language }: HeroProps) {
               <button
                 onClick={() => handleScroll('projects')}
                 className="inline-flex items-center gap-2 text-sm md:text-base px-8 py-4 bg-primary text-neutral-900 font-bold rounded-lg shadow-lg transition-all transform hover:scale-105 hover:bg-primary-dark"
+                aria-label={language === 'es' ? 'Ver mis proyectos' : 'View my projects'}
               >
                 {content.cta[language]}
                 <ArrowRight size={20} />
               </button>
             </div>
           </div>
-          <div className="flex-1 max-w-md lg:max-w-lg">
+          <div className="flex-1 w-full max-w-md lg:max-w-lg">
             <div className="relative group/hero-card">
               {/* Glow effect on hover */}
               <div className="absolute inset-0 bg-primary/20 rounded-2xl blur-2xl opacity-0 group-hover/hero-card:opacity-100 transition-opacity duration-700" />
 
               <div className="absolute inset-0 bg-primary-dark rounded-2xl transform rotate-3 opacity-70 animate-pulse-slow group-hover/hero-card:rotate-2 transition-transform duration-700" />
 
-              <div 
+              <button
                 onClick={() => setCurrentImage(prev => prev === 0 ? 1 : 0)}
-                className="relative bg-neutral-800 rounded-2xl p-2 shadow-card transform hover:rotate-0 transition-all duration-700 overflow-hidden cursor-rotate group-hover/hero-card:scale-[1.01] group-hover/hero-card:shadow-primary/20 select-none active:scale-95"
+                className="relative w-full bg-neutral-800 rounded-2xl p-2 shadow-card transform hover:rotate-0 transition-all duration-700 overflow-hidden cursor-rotate group-hover/hero-card:scale-[1.01] group-hover/hero-card:shadow-primary/20 select-none active:scale-95 text-left"
+                aria-label={language === 'es' ? 'Cambiar foto de perfil' : 'Change profile picture'}
               >
                 <div className="relative aspect-[4/5] sm:aspect-square lg:aspect-[4/5] overflow-hidden rounded-xl">
                   <img
-                    src="/hero1.png"
+                    src="/hero1.webp"
                     alt="Jonathan Abraham Bartoloni"
+                    width="600"
+                    height="750"
                     className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[1500ms] ease-in-out ${currentImage === 0 ? 'opacity-100' : 'opacity-0'}`}
                   />
                   <img
-                    src="/hero.png"
+                    src="/hero.webp"
                     alt="Jonathan Abraham Bartoloni - alternate"
+                    width="600"
+                    height="750"
                     className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[1500ms] ease-in-out ${currentImage === 1 ? 'opacity-100' : 'opacity-0'}`}
                   />
-                  
+
                   {/* Tooltip Badge */}
                   <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-primary/90 text-neutral-900 px-4 py-2 rounded-full text-xs font-bold flex items-center gap-2 opacity-0 group-hover/hero-card:opacity-100 transition-all duration-300 shadow-xl backdrop-blur-md pointer-events-none z-20 translate-y-2 group-hover/hero-card:translate-y-0">
                     <RotateCcw size={14} className="animate-spin-slow" />
                     {language === 'es' ? 'Click para cambiar' : 'Click to switch'}
                   </div>
                 </div>
-              </div>
+              </button>
             </div>
           </div>
         </div>
@@ -199,6 +205,8 @@ export default function Hero({ language }: HeroProps) {
                 ? 'bg-primary scale-125 shadow-lg'
                 : 'bg-white/30 hover:bg-white/60'
                 }`}
+              aria-label={language === 'es' ? `Ir a sección ${section}` : `Go to ${section} section`}
+              aria-current={activeSection === section ? 'true' : 'false'}
             />
           ))}
         </div>
