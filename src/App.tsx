@@ -1,10 +1,16 @@
-import { useState } from 'react';
+import { useState, lazy, Suspense } from 'react';
 import Navigation from './components/Navigation';
 import Hero from './components/Hero';
-import Experience from './components/Experience';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
-import TechStack from './components/TechStack';
+const Experience = lazy(() => import('./components/Experience'));
+const Projects = lazy(() => import('./components/Projects'));
+const Contact = lazy(() => import('./components/Contact'));
+const TechStack = lazy(() => import('./components/TechStack'));
+import { 
+  TechStackSkeleton, 
+  ExperienceSkeleton, 
+  ProjectsSkeleton, 
+  ContactSkeleton 
+} from './components/Skeletons';
 import { Language } from './types';
 import { experiences, projects } from './data';
 
@@ -15,10 +21,18 @@ function App() {
     <div className="min-h-screen text-text-primary">
       <Navigation language={language} onLanguageChange={setLanguage} />
       <Hero language={language} />
-      <TechStack language={language} />
-      <Experience language={language} experiences={experiences} />
-      <Projects language={language} projects={projects} />
-      <Contact language={language} />
+      <Suspense fallback={<TechStackSkeleton />}>
+        <TechStack language={language} />
+      </Suspense>
+      <Suspense fallback={<ExperienceSkeleton />}>
+        <Experience language={language} experiences={experiences} />
+      </Suspense>
+      <Suspense fallback={<ProjectsSkeleton />}>
+        <Projects language={language} projects={projects} />
+      </Suspense>
+      <Suspense fallback={<ContactSkeleton />}>
+        <Contact language={language} />
+      </Suspense>
 
       <footer className="bg-neutral-900 text-white py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
