@@ -1,7 +1,7 @@
 import { ArrowRight, FileDown } from 'lucide-react';
 import { Language } from '../types';
 import '../css/hero.css';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 interface HeroProps {
   language: Language;
@@ -39,11 +39,15 @@ export default function Hero({ language }: HeroProps) {
 
 
   const handleScroll = (sectionId: string) => {
-  const element = document.getElementById(sectionId);
-  if (element) {
+    const element = document.getElementById(sectionId);
+    if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
+  const [currentImage, setCurrentImage] = useState(0);
+  const heroRef = useRef<HTMLDivElement>(null);
+  const [isIntersecting, setIsIntersecting] = useState(false);
+
   useEffect(() => {
     const handleScrollProgress = () => {
       const scrollTop = window.scrollY;
@@ -52,24 +56,51 @@ export default function Hero({ language }: HeroProps) {
       setScrollProgress(progress);
 
       const current = sections.find((section) => {
-      const el = document.getElementById(section);
-      if (!el) return false;
+        const el = document.getElementById(section);
+        if (!el) return false;
 
-      const rect = el.getBoundingClientRect();
-      return rect.top <= 200 && rect.bottom >= 200;
-    });
+        const rect = el.getBoundingClientRect();
+        return rect.top <= 200 && rect.bottom >= 200;
+      });
 
       if (current) setActiveSection(current);
     };
 
     window.addEventListener('scroll', handleScrollProgress);
-    return () => window.removeEventListener('scroll', handleScrollProgress);
+
+    // Intersection Observer for performance and mobile animation
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsIntersecting(entry.isIntersecting),
+      { threshold: 0.1 }
+    );
+
+    if (heroRef.current) {
+      observer.observe(heroRef.current);
+    }
+
+    return () => {
+      window.removeEventListener('scroll', handleScrollProgress);
+      if (heroRef.current) observer.unobserve(heroRef.current);
+    };
   }, []);
+
+  // Automatic image switch for mobile
+  useEffect(() => {
+    const isMobile = !window.matchMedia('(hover: hover)').matches;
+
+    if (isMobile && isIntersecting) {
+      const interval = setInterval(() => {
+        setCurrentImage((prev) => (prev === 0 ? 1 : 0));
+      }, 6000);
+      return () => clearInterval(interval);
+    }
+  }, [isIntersecting]);
 
 
   return (
     <section
       id="hero"
+      ref={heroRef}
       className="min-h-screen relative overflow-hidden text-text-primary pt-16">
       {/* Contenido principal */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -95,7 +126,7 @@ export default function Hero({ language }: HeroProps) {
             </p>
 
             <div className="flex gap-4">
-             <a
+              <a
                 href={cvFile}
                 download
                 className="inline-flex items-center gap-2 text-sm md:text-base px-6 py-3 border border-primary text-primary font-semibold rounded-lg transition-all hover:bg-primary/10"
@@ -113,14 +144,28 @@ export default function Hero({ language }: HeroProps) {
             </div>
           </div>
           <div className="flex-1 max-w-md lg:max-w-lg">
-            <div className="relative">
-              <div className="absolute inset-0 bg-primary-dark rounded-2xl transform rotate-3 opacity-70 animate-pulse-slow" />
-              <div className="relative bg-neutral-800 rounded-2xl p-2 shadow-card transform hover:rotate-0 transition-transform duration-300">
-                <img
-                  src="/hero.png"
-                  alt="Jonathan Abraham Bartoloni"
-                  className="w-full h-auto rounded-xl object-cover"
-                />
+            <div className="relative group/hero-card">
+              {/* Glow effect on hover */}
+              <div className="absolute inset-0 bg-primary/20 rounded-2xl blur-2xl opacity-0 group-hover/hero-card:opacity-100 transition-opacity duration-700" />
+
+              <div className="absolute inset-0 bg-primary-dark rounded-2xl transform rotate-3 opacity-70 animate-pulse-slow group-hover/hero-card:rotate-2 transition-transform duration-700" />
+
+              <div 
+                onClick={() => setCurrentImage(prev => prev === 0 ? 1 : 0)}
+                className="relative bg-neutral-800 rounded-2xl p-2 shadow-card transform hover:rotate-0 transition-all duration-700 overflow-hidden cursor-rotate group-hover/hero-card:scale-[1.01] group-hover/hero-card:shadow-primary/20 select-none active:scale-95"
+              >
+                <div className="relative aspect-[4/5] sm:aspect-square lg:aspect-[4/5] overflow-hidden rounded-xl">
+                  <img
+                    src="/hero1.png"
+                    alt="Jonathan Abraham Bartoloni"
+                    className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[1500ms] ease-in-out ${currentImage === 0 ? 'opacity-100' : 'opacity-0'}`}
+                  />
+                  <img
+                    src="/hero.png"
+                    alt="Jonathan Abraham Bartoloni - alternate"
+                    className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[1500ms] ease-in-out ${currentImage === 1 ? 'opacity-100' : 'opacity-0'}`}
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -128,31 +173,30 @@ export default function Hero({ language }: HeroProps) {
       </div>
 
       {/* Flecha scroll */}
-<div className="hidden md:flex fixed right-6 top-1/2 -translate-y-1/2 z-50 flex flex-col items-center gap-4">
-  {/* Progress bar */}
-  <div className="w-1 h-40 bg-white/10 rounded-full overflow-hidden">
-    <div
-      className="bg-primary w-full transition-all duration-200"
-      style={{ height: `${scrollProgress}%` }}
-    />
-  </div>
+      <div className="hidden md:flex fixed right-6 top-1/2 -translate-y-1/2 z-50 flex flex-col items-center gap-4">
+        {/* Progress bar */}
+        <div className="w-1 h-40 bg-white/10 rounded-full overflow-hidden">
+          <div
+            className="bg-primary w-full transition-all duration-200"
+            style={{ height: `${scrollProgress}%` }}
+          />
+        </div>
 
-  {/* Dots */}
-  <div className="flex flex-col gap-3">
-    {sections.map((section) => (
-      <button
-        title={section}
-        key={section}
-        onClick={() => handleScroll(section)}
-        className={`w-3 h-3 rounded-full transition-all duration-300 ${
-          activeSection === section
-            ? 'bg-primary scale-125 shadow-lg'
-            : 'bg-white/30 hover:bg-white/60'
-        }`}
-      />
-    ))}
-  </div>
-</div>
+        {/* Dots */}
+        <div className="flex flex-col gap-3">
+          {sections.map((section) => (
+            <button
+              title={section}
+              key={section}
+              onClick={() => handleScroll(section)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${activeSection === section
+                ? 'bg-primary scale-125 shadow-lg'
+                : 'bg-white/30 hover:bg-white/60'
+                }`}
+            />
+          ))}
+        </div>
+      </div>
     </section>
   );
 }
