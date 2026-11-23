@@ -158,19 +158,20 @@ export default function Hero({ language }: HeroProps) {
               >
                 <div className="relative aspect-[4/5] sm:aspect-square lg:aspect-[4/5] overflow-hidden rounded-xl">
                   <img
-                    src="/hero1.webp"
+                    src={`${import.meta.env.BASE_URL}hero1.webp`}
                     alt="Jonathan Abraham Bartoloni"
                     width="600"
                     height="750"
                     className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[1500ms] ease-in-out ${currentImage === 0 ? 'opacity-100' : 'opacity-0'}`}
                   />
                   <img
-                    src="/hero.webp"
+                    src={`${import.meta.env.BASE_URL}hero.webp`}
                     alt="Jonathan Abraham Bartoloni - alternate"
                     width="600"
                     height="750"
                     className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[1500ms] ease-in-out ${currentImage === 1 ? 'opacity-100' : 'opacity-0'}`}
                   />
+                </div>
 
                   {/* Tooltip Badge */}
                   <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-primary/90 text-neutral-900 px-4 py-2 rounded-full text-xs font-bold flex items-center gap-2 opacity-0 group-hover/hero-card:opacity-100 transition-all duration-300 shadow-xl backdrop-blur-md pointer-events-none z-20 translate-y-2 group-hover/hero-card:translate-y-0">

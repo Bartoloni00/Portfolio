@@ -59,7 +59,7 @@ export default function Experience({ language, experiences }: ExperienceProps) {
                         {/* Logo o Icono Maletín */}
                         {exp.image ? (
                           <img 
-                            src={exp.image} 
+                            src={`${import.meta.env.BASE_URL}${exp.image}`} 
                             alt={exp.company} 
                             width="96"
                             height="96"
@@ -140,7 +140,7 @@ export default function Experience({ language, experiences }: ExperienceProps) {
               {
                     selectedExperience.image ? (
                       <img 
-                        src={selectedExperience.image} 
+                        src={`${import.meta.env.BASE_URL}${selectedExperience.image}`} 
                         alt={selectedExperience.company} 
                         width="192"
                         height="192"
