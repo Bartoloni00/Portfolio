@@ -31,12 +31,14 @@ export default function Hero({ language }: HeroProps) {
     },
   };
 
-  const cvFile = language === 'es' ? '/cv/es-cv-abraham-bartoloni.pdf' : '/cv/en-cv-abraham-bartoloni.pdf';
+  const cvFile =
+    language === 'es'
+      ? `${import.meta.env.BASE_URL}cv/es-cv-abraham-bartoloni.pdf`
+      : `${import.meta.env.BASE_URL}cv/en-cv-abraham-bartoloni.pdf`;
 
   const [activeSection, setActiveSection] = useState('hero');
   const [scrollProgress, setScrollProgress] = useState(0);
   const sections = ['hero', 'experience', 'projects', 'contact'];
-
 
   const handleScroll = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -96,12 +98,12 @@ export default function Hero({ language }: HeroProps) {
     }
   }, [isIntersecting]);
 
-
   return (
     <section
       id="hero"
       ref={heroRef}
-      className="min-h-screen relative overflow-x-hidden text-text-primary pt-16">
+      className="min-h-screen relative overflow-x-hidden text-text-primary pt-16"
+    >
       {/* Contenido principal */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between min-h-[calc(100vh-4rem)] py-12 gap-12">
@@ -144,6 +146,7 @@ export default function Hero({ language }: HeroProps) {
               </button>
             </div>
           </div>
+
           <div className="flex-1 w-full max-w-md lg:max-w-lg">
             <div className="relative group/hero-card">
               {/* Glow effect on hover */}
@@ -152,7 +155,7 @@ export default function Hero({ language }: HeroProps) {
               <div className="absolute inset-0 bg-primary-dark rounded-2xl transform rotate-3 opacity-70 animate-pulse-slow group-hover/hero-card:rotate-2 transition-transform duration-700" />
 
               <button
-                onClick={() => setCurrentImage(prev => prev === 0 ? 1 : 0)}
+                onClick={() => setCurrentImage((prev) => (prev === 0 ? 1 : 0))}
                 className="relative w-full bg-neutral-800 rounded-2xl p-2 shadow-card transform hover:rotate-0 transition-all duration-700 overflow-hidden cursor-rotate group-hover/hero-card:scale-[1.01] group-hover/hero-card:shadow-primary/20 select-none active:scale-95 text-left"
                 aria-label={language === 'es' ? 'Cambiar foto de perfil' : 'Change profile picture'}
               >
@@ -173,11 +176,10 @@ export default function Hero({ language }: HeroProps) {
                   />
                 </div>
 
-                  {/* Tooltip Badge */}
-                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-primary/90 text-neutral-900 px-4 py-2 rounded-full text-xs font-bold flex items-center gap-2 opacity-0 group-hover/hero-card:opacity-100 transition-all duration-300 shadow-xl backdrop-blur-md pointer-events-none z-20 translate-y-2 group-hover/hero-card:translate-y-0">
-                    <RotateCcw size={14} className="animate-spin-slow" />
-                    {language === 'es' ? 'Click para cambiar' : 'Click to switch'}
-                  </div>
+                {/* Tooltip Badge */}
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-primary/90 text-neutral-900 px-4 py-2 rounded-full text-xs font-bold flex items-center gap-2 opacity-0 group-hover/hero-card:opacity-100 transition-all duration-300 shadow-xl backdrop-blur-md pointer-events-none z-20 translate-y-2 group-hover/hero-card:translate-y-0">
+                  <RotateCcw size={14} className="animate-spin-slow" />
+                  {language === 'es' ? 'Click para cambiar' : 'Click to switch'}
                 </div>
               </button>
             </div>
@@ -202,10 +204,11 @@ export default function Hero({ language }: HeroProps) {
               title={section}
               key={section}
               onClick={() => handleScroll(section)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${activeSection === section
-                ? 'bg-primary scale-125 shadow-lg'
-                : 'bg-white/30 hover:bg-white/60'
-                }`}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                activeSection === section
+                  ? 'bg-primary scale-125 shadow-lg'
+                  : 'bg-white/30 hover:bg-white/60'
+              }`}
               aria-label={language === 'es' ? `Ir a sección ${section}` : `Go to ${section} section`}
               aria-current={activeSection === section ? 'true' : 'false'}
             />
