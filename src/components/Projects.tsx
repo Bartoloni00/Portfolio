@@ -45,7 +45,7 @@ export default function Projects({ language, projects }: ProjectsProps) {
              {
                 project.image
                 ? <img 
-                    src={project.image} 
+                    src={"${import.meta.env.BASE_URL}${project.image}"}
                     alt={project.title[language]} 
                     width="400"
                     height="180"
@@ -90,7 +90,7 @@ export default function Projects({ language, projects }: ProjectsProps) {
               {
                     selectedProject.image ? (
                       <img 
-                        src={selectedProject.image} 
+                        src={"${import.meta.env.BASE_URL}${selectedProject.image}"} 
                         alt={selectedProject.title[language]} 
                         width="240"
                         height="300"

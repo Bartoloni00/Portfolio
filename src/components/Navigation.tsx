@@ -111,7 +111,7 @@ export default function Navigation({ language, onLanguageChange }: NavigationPro
                          hover:bg-honey hover:text-onyx transition-all duration-300 shadow-md hover:shadow-honey/30"
             >
               <img
-                src={flagSrc}
+                src={"${import.meta.env.BASE_URL}${flagSrc}"}
                 alt={language === 'es' ? 'Español' : 'English'}
                 className="h-5 rounded-sm object-cover hover:text-yellow-500 transition-colors"
               />
