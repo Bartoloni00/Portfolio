@@ -1,4 +1,5 @@
 import { ExperienceItem, ProjectItem } from './types';
+const baseUrl = import.meta.env.BASE_URL;
 
 export const experiences: ExperienceItem[] = [
   {
@@ -10,185 +11,154 @@ export const experiences: ExperienceItem[] = [
     company: 'Syloper',
     period: {
       es: 'diciembre de 2025 - actualidad',
-      en: 'December 2025 - Present'
+      en: 'Dec 2025 - Present'
     },
     description: {
-      es: 'Desarrollo full stack en plataformas financieras trabajando en todo el ciclo de vida del software (planning, desarrollo, deploy y debugging). Implemento soluciones backend y serverless con AWS (Lambda, DynamoDB, S3) e integro múltiples APIs externas y sistemas ERP. Gestiono autenticación basada en tokens y consistencia entre entornos. También participo en rediseños UX basados en Figma y en la mejora continua mediante code reviews, estimaciones y trabajo en equipo bajo Scrum.',
-      en: 'Full stack development on financial platforms, covering the entire software lifecycle (planning, development, deployment, and debugging). I build backend and serverless solutions using AWS (Lambda, DynamoDB, S3) and integrate multiple external APIs and ERP systems. I manage token-based authentication and environment consistency. I also contribute to UX redesigns based on Figma and continuous improvement through code reviews, estimations, and Scrum teamwork.'
+      es: 'Responsable técnico principal en el desarrollo E2E del MVP y mejora continua de una aplicación móvil (iOS y Android), backoffice y API, desde el kickoff hasta la publicación en tiendas (~95% de ownership técnico y delegación de tareas). Arquitecto soluciones con React + Ionic, Laravel y PostgreSQL, con flujos asíncronos basados en eventos (Redis, Laravel Horizon, jobs), infraestructura en Railway y AWS S3, CI/CD con GitHub Actions, evolución de app logística (Android API 34 a 36 y encriptación de datos) y rediseño de plataforma financiera (broker), reduciendo un endpoint en tiempo real de ~40s a ~600 ms y alcanzando ~90% de cobertura de tests en backend.',
+      en: 'Main technical lead for the end-to-end development of an MVP mobile app (iOS & Android), backoffice, and API, from kickoff to store deployment (~95% technical ownership and task delegation). Architect solutions using React + Ionic, Laravel, and PostgreSQL, with event-driven async workflows (Redis, Laravel Horizon, background jobs), Railway and AWS S3 infrastructure, CI/CD via GitHub Actions, logistics mobile app evolution (Android API 34 to 36 and user data encryption), and financial platform (broker) redesign, cutting a real-time endpoint from ~40s to ~600ms and reaching ~90% backend test coverage.'
     },
     items: {
       es: [
-        'Desarrollo de soluciones serverless con AWS (Lambda, DynamoDB, S3).',
-        'Integración de sistemas ERP y múltiples APIs financieras externas.',
-        'Rediseño de interfaces UX colaborando directamente en Figma.',
-        'Liderazgo técnico en code reviews y optimización de flujos Scrum.'
+        'Liderazgo técnico E2E de MVP móvil (iOS/Android), backoffice y API (~95% de desarrollo) con React + Ionic, Laravel y PostgreSQL.',
+        'Flujos asíncronos y colas con Redis y Laravel Horizon para auditoría, reportes y notificaciones, más CI/CD en Railway, AWS S3 y GitHub Actions.',
+        'Migración de app logística Ionic de Android API 34 a 36, esquema de encriptación de datos de usuario y mejoras de UX.',
+        'Rediseño de plataforma financiera (broker) bajando un endpoint en tiempo real de ~40s a ~600 ms y ~90% de cobertura de tests en CI/CD.'
       ],
       en: [
-        'Development of serverless solutions with AWS (Lambda, DynamoDB, S3).',
-        'Integration of ERP systems and multiple external financial APIs.',
-        'UX interface redesign collaborating directly in Figma.',
-        'Technical leadership in code reviews and Scrum workflow optimization.'
+        'End-to-end technical lead for mobile MVP (iOS & Android), backoffice, and API (~95% development) with React + Ionic, Laravel, and PostgreSQL.',
+        'Async event workflows, Redis, and Laravel Horizon for auditing, reporting, and notifications, plus CI/CD on Railway, AWS S3, and GitHub Actions.',
+        'Logistics Ionic app migration from Android API 34 to 36, user data encryption schema, and UX improvements.',
+        'Financial broker platform redesign cutting a real-time endpoint from ~40s to ~600ms and ~90% backend test coverage in CI/CD.'
       ]
     },
-    technologies: ['Node.js', 'TypeScript', 'React', 'AWS', 'Lambda', 'DynamoDB', 'S3', 'CakePHP', 'Docker'],
-    image: '/experience/syloper_logo.jpeg'
+    technologies: [
+      'Laravel',
+      'React',
+      'Ionic',
+      'PostgreSQL',
+      'Redis',
+      'Laravel Horizon',
+      'AWS S3',
+      'Railway',
+      'GitHub Actions'
+    ],
+    image: `${baseUrl}experience/syloper_logo.jpeg`
   },
   {
     id: 'exp-2',
     role: {
-      es: 'Freelance Full Stack (Proyectos seleccionados)',
-      en: 'Freelance Full Stack (Selected Projects)'
+      es: 'Full Stack Freelance Developer',
+      en: 'Full Stack Developer (Freelance)'
     },
-    company: 'Trabajo independiente',
+    company: 'Proyectos para clientes',
     period: {
       es: 'Proyectos recientes',
       en: 'Recent projects'
     },
     description: {
-      es: 'Lideré el desarrollo y resolución de sistemas para clientes en conjunto con otro desarrollador. Recuperé una aplicación crítica de gestión escolar en 14 días, resolviendo fallas en backend y frontend (Node.js, Express, React, MongoDB). Además, diseñé y desarrollé una plataforma SaaS multitenant para gestión de reservas en restaurantes, definiendo arquitectura, lógica de negocio y escalabilidad (Laravel, MySQL, React, TypeScript).',
-      en: 'Led the development and recovery of client systems alongside another developer. Rebuilt a critical school management application in 14 days, resolving backend and frontend issues (Node.js, Express, React, MongoDB). Additionally, designed and developed a multi-tenant SaaS platform for restaurant reservations, defining architecture, business logic, and scalability (Laravel, MySQL, React, TypeScript).'
+      es: 'Participación en arquitectura, backend y frontend de soluciones web y móviles a medida junto a equipos reducidos. Recuperación y reescritura de una aplicación crítica en 14 días y diseño de una arquitectura SaaS multitenant.',
+      en: 'Architected and developed custom web and mobile solutions alongside small cross-functional teams. Rescued and rewrote a mission-critical application in 14 days and designed a multi-tenant SaaS architecture.'
     },
     items: {
       es: [
-        'Recuperación de App de gestión escolar crítica en tiempo récord (14 días).',
-        'Arquitectura y desarrollo de plataforma SaaS multitenant para gastronomía.',
-        'Diseño de lógica de negocio escalable con Laravel y React.',
-        'Consultoría técnica para la resolución de fallas complejas en frontend y backend.'
+        'Recuperación y reescritura de una aplicación crítica en 14 días.',
+        'Diseño de arquitectura SaaS multitenant.',
+        'Desarrollo full stack junto a equipos pequeños en soluciones web y móviles.'
       ],
       en: [
-        'Recovery of critical school management App in record time (14 days).',
-        'Architecture and development of a multi-tenant SaaS platform for gastronomy.',
-        'Scalable business logic design with Laravel and React.',
-        'Technical consultancy for resolving complex frontend and backend failures.'
+        'Rescued and rewrote a mission-critical application in 14 days.',
+        'Designed a multi-tenant SaaS architecture.',
+        'Full-stack web and mobile development alongside small teams.'
       ]
     },
     technologies: ['Node.js', 'Express', 'React', 'MongoDB', 'Laravel', 'MySQL', 'TypeScript'],
-    image: '/experience/freelance.jpeg'
+    image: `${baseUrl}experience/freelance.jpeg`
   },
   {
     id: 'exp-3',
     role: {
-      es: 'Backend Developer',
-      en: 'Backend Developer'
+      es: 'Backend Developer (Laravel)',
+      en: 'Backend Developer (Laravel)'
     },
-    company: 'TelePagos',
+    company: 'Telepagos',
     period: {
       es: 'junio de 2025 - octubre de 2025',
-      en: 'June 2025 - October 2025'
+      en: 'Jun 2025 - Oct 2025'
     },
     description: {
-      es: 'Diseñé e implementé módulos backend en Laravel aplicando Clean Architecture dentro de un monolito modular. Gestioné y optimicé una base de datos compleja (+200 tablas), resolviendo errores críticos y mejorando la estabilidad del sistema. Documenté y validé APIs con Swagger, facilitando la comunicación entre equipos. Participé en pair programming y mejoras continuas del código.',
-      en: 'Designed and implemented backend modules in Laravel using Clean Architecture within a modular monolith. Managed and optimized a complex database (+200 tables), resolving critical issues and improving system stability. Documented and validated APIs with Swagger, enhancing team communication. Participated in pair programming and continuous code improvements.'
+      es: 'Diseño e implementación desde cero de un módulo backend en Laravel aplicando Clean Architecture. Optimización de consultas y acceso a una base MySQL de más de 200 tablas, resolución de errores críticos en producción y documentación/validación de endpoints con Swagger.',
+      en: 'Built a modular backend feature from scratch using Clean Architecture in Laravel, ensuring long-term scalability and maintainability. Optimized queries across a 200+ table MySQL database, resolved critical production issues, and documented and validated API endpoints with Swagger.'
     },
     items: {
       es: [
-        'Optimización de base de datos relacional de alta complejidad (+200 tablas).',
-        'Implementación de Clean Architecture en un monolito modular con Laravel.',
-        'Documentación y validación integral de APIs utilizando Swagger.',
+        'Módulo backend desde cero en Laravel aplicando Clean Architecture.',
+        'Optimización de consultas y acceso a base MySQL de +200 tablas y resolución de fallas críticas en producción.',
+        'Documentación y validación de endpoints API con Swagger.'
       ],
       en: [
-        'Optimization of highly complex relational database (+200 tables).',
-        'Clean Architecture implementation in a modular monolith with Laravel.',
-        'Comprehensive API documentation and validation using Swagger.',
+        'Backend module built from scratch in Laravel using Clean Architecture.',
+        'Query and access optimization across a 200+ table MySQL database and critical production issue resolution.',
+        'API endpoint documentation and validation with Swagger.'
       ]
     },
-    technologies: ['PHP', 'Laravel', 'MySQL', 'Swagger', 'Docker'],
-    image: '/experience/telepagos_logo.jpeg'
+    technologies: ['PHP', 'Laravel', 'MySQL', 'Swagger'],
+    image: `${baseUrl}experience/telepagos_logo.jpeg`
   },
   {
     id: 'exp-4',
     role: {
       es: 'Consultor IT',
-      en: 'IT Consultant'
+      en: 'IT Service Management Consultant'
     },
-    company: 'IT Point Seguridad e Informática',
+    company: 'IT Point',
     period: {
       es: 'mayo de 2024 - abril de 2025',
-      en: 'May 2024 - April 2025'
+      en: 'May 2024 - Apr 2025'
     },
     description: {
-      es: 'Optimización y mantenimiento de sistemas Windows y Linux, resolviendo fallas críticas y mejorando rendimiento. Administración de hardware y soporte técnico, con enfoque en estabilidad operativa. También participé en tareas de contenido digital y soporte a clientes.',
-      en: 'Optimization and maintenance of Windows and Linux systems, resolving critical failures and improving performance. Hardware administration and technical support focused on operational stability. Also contributed to digital content and client support.'
+      es: 'Diagnóstico, resolución y optimización de problemas de software y hardware en entornos Windows y Linux.',
+      en: 'Diagnosed, optimized, and resolved software and hardware issues across Windows and Linux environments.'
     },
     items: {
       es: [
-        'Mantenimiento preventivo y correctivo de entornos críticos Windows/Linux.',
-        'Administración de hardware y resolución de fallas de sistemas operativos.',
-        'Optimización de rendimiento en sistemas de usuarios finales.',
-        'Soporte técnico especializado.'
+        'Diagnóstico y resolución de fallas de software y hardware en Windows y Linux.',
+        'Optimización y mantenimiento de entornos operativos.'
       ],
       en: [
-        'Preventive and corrective maintenance of critical Windows/Linux environments.',
-        'Hardware administration and operating system failure resolution.',
-        'Performance optimization in end-user systems.',
-        'Specialized technical support.'
+        'Diagnostics and resolution of software and hardware issues across Windows and Linux.',
+        'System optimization and maintenance.'
       ]
     },
-    technologies: ['Windows', 'Linux', 'Hardware', 'Networking'],
-    image: '/experience/itPoint_logo.jpeg'
+    technologies: ['Windows', 'Linux', 'Hardware'],
+    image: `${baseUrl}experience/itPoint_logo.jpeg`
   },
   {
     id: 'exp-5',
     role: {
-      es: 'Tutor Privado',
-      en: 'Private Tutor'
+      es: 'Tutor Privado de Programación',
+      en: 'Programming Mentor'
     },
-    company: 'Autónomo',
+    company: 'Freelance',
     period: {
       es: 'abril de 2024 - marzo de 2025',
-      en: 'April 2024 - March 2025'
+      en: 'Apr 2024 - Mar 2025'
     },
     description: {
-      es: 'Tutor en desarrollo backend y full stack (Laravel, Node.js, React). Diseñé clases personalizadas enfocadas en resolución de problemas reales, buenas prácticas y arquitectura, mejorando la capacidad práctica de los estudiantes.',
-      en: 'Tutor in backend and full stack development (Laravel, Node.js, React). Designed personalized lessons focused on real problem-solving, best practices, and architecture, improving students’ practical skills.'
+      es: 'Clases personalizadas y mentoría técnica 1 a 1 en PHP, Laravel, Node.js y React enfocado en proyectos reales y mejora del rendimiento práctico de los estudiantes.',
+      en: 'Provided 1-on-1 technical mentoring and tailored lessons in PHP, Laravel, Node.js, and React for production-grade projects and practical student performance.'
     },
     items: {
       es: [
-        'Diseño de clases prácticas basadas en resolución de problemas reales.',
-        'Enseñanza de patrones de diseño, arquitectura y buenas prácticas.',
-        'Mentoreo intensivo en el stack Laravel, Node.js y React.',
+        'Mentoría técnica 1 a 1 y clases personalizadas en PHP, Laravel, Node.js y React.',
+        'Acompañamiento en proyectos reales y mejora práctica del rendimiento de los estudiantes.'
       ],
       en: [
-        'Design of practical lessons based on real-world problem solving.',
-        'Teaching design patterns, architecture, and best practices.',
-        'Intensive mentoring in the Laravel, Node.js, and React stack.',
+        '1-on-1 technical mentoring and tailored lessons in PHP, Laravel, Node.js, and React.',
+        'Guidance on real-world projects and practical student performance improvement.'
       ]
     },
-    technologies: ['PHP', 'Laravel', 'Node.js', 'React', 'Vue.js'],
-    image: '/experience/tutoria.jpg'
-  },
-  {
-    id: 'exp-6',
-    role: {
-      es: 'Profesor Invitado en Desarrollo de Software',
-      en: 'Guest Lecturer in Software Development'
-    },
-    company: 'Instituto Superior Gaspar L. Benavento',
-    period: {
-      es: '2024 y 2025',
-      en: '2024 and 2025'
-    },
-    description: {
-      es: 'Orador invitado presentando el ciclo de vida del desarrollo de software a +30 estudiantes. Enfoque en buenas prácticas, arquitectura y aplicación real del conocimiento.',
-      en: 'Guest speaker presenting the software development lifecycle to 30+ students, focusing on best practices, architecture, and real-world application.'
-    },
-    items: {
-      es: [
-        'Orador principal para +30 estudiantes sobre estándares de la industria.',
-        'Presentación de flujos de trabajo profesionales y Clean Architecture.',
-      ],
-      en: [
-        'Keynote speaker for 30+ students on industry standards.',
-        'Presentation of professional workflows and Clean Architecture.',
-      ]
-    },
-    technologies: [
-      'Software Architecture',
-      'API Design',
-      'Mentoring',
-      'Technical Communication'
-    ],
-    image: '/experience/orador.jpeg'
+    technologies: ['PHP', 'Laravel', 'Node.js', 'React'],
+    image: `${baseUrl}experience/tutoria.jpg`
   }
 ];
 
@@ -221,7 +191,7 @@ export const projects: ProjectItem[] = [
       github: 'https://github.com/Bartoloni00/HandyStock',
       demo: 'https://www.linkedin.com/posts/abraham-bartoloni_desarrollo-backend-reactjs-activity-7380942507389464576-4e-B?utm_source=share&utm_medium=member_desktop&rcm=ACoAADIriZAB9ygubIpVIL1xuh4Zn92BQUVjtYA'
     },
-    image: '/projects/handystock.png'
+    image: `${baseUrl}/projects/handystock.png`
   },
   {
     id: 'proj-2',
@@ -238,7 +208,7 @@ export const projects: ProjectItem[] = [
       github: 'https://github.com/Bartoloni00/EsmeraldaPresupuestos',
       demo: ''
     },
-    image: '/projects/esmeralda.png'
+    image: `${baseUrl}/projects/esmeralda.png`
   },
   {
     id: 'proj-3',
@@ -283,7 +253,7 @@ export const projects: ProjectItem[] = [
       github: 'https://github.com/Bartoloni00/barBrainDB',
       demo: 'https://vm.tiktok.com/ZMAXbvKND/'
     },
-    image: '/projects/barbrain.png'
+    image: `${baseUrl}/projects/barbrain.png`
   },
   {
     id: 'proj-5',
@@ -300,7 +270,7 @@ export const projects: ProjectItem[] = [
       github: 'https://github.com/Bartoloni00/hijitus-api',
       demo: ''
     },
-    image: '/projects/hijitus2.png'
+    image: `${baseUrl}/projects/hijitus2.png`
   },
   {
     id: 'proj-6',

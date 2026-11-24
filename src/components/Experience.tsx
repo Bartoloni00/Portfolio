@@ -55,11 +55,11 @@ export default function Experience({ language, experiences }: ExperienceProps) {
                       aria-label={language === 'es' ? `Ver detalles de mi experiencia en ${exp.company}` : `View details of my experience at ${exp.company}`}
                       className="p-5 sm:p-6 md:p-8 rounded-3xl border border-neutral-800 hover:border-primary/40 transition-all duration-300 shadow-xl cursor-pointer transform text-left w-full"
                     >
-                      <div className="flex flex-col sm:flex-row items-center sm:items-start sm:items-center gap-4 mb-5">
+                      <div className="flex flex-col sm:flex-row items-center sm:items-center gap-4 mb-5">
                         {/* Logo o Icono Maletín */}
                         {exp.image ? (
                           <img 
-                            src={`${import.meta.env.BASE_URL}${exp.image}`} 
+                            src={`${exp.image}`} 
                             alt={exp.company} 
                             width="96"
                             height="96"
@@ -140,7 +140,7 @@ export default function Experience({ language, experiences }: ExperienceProps) {
               {
                     selectedExperience.image ? (
                       <img 
-                        src={`${import.meta.env.BASE_URL}${selectedExperience.image}`} 
+                        src={`${selectedExperience.image}`} 
                         alt={selectedExperience.company} 
                         width="192"
                         height="192"

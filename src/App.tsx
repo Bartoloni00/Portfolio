@@ -9,7 +9,7 @@ import { Language } from './types';
 import { experiences, projects } from './data';
 
 function App() {
-  const [language, setLanguage] = useState<Language>('es');
+  const [language, setLanguage] = useState<Language>('en');
 
   return (
     <div className="min-h-screen text-text-primary">

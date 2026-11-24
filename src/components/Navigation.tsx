@@ -9,7 +9,7 @@ interface NavigationProps {
 
 export default function Navigation({ language, onLanguageChange }: NavigationProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const flagSrc = language === 'es' ? '/language/es.png' : '/language/en.png';
+  const flagSrc = language === 'es' ? `${import.meta.env.BASE_URL}/language/es.png` : `${import.meta.env.BASE_URL}/language/en.png`;
   const navItems = {
     es: ['Inicio', 'Experiencia', 'Proyectos', 'Contacto'],
     en: ['Home', 'Experience', 'Projects', 'Contact']
@@ -36,7 +36,7 @@ export default function Navigation({ language, onLanguageChange }: NavigationPro
               className="text-2xl font-bold text-white hover:text-honey transition-colors drop-shadow-sm"
               aria-label={language === 'es' ? 'Ir al inicio' : 'Go to top'}
             >
-              <img src="/favicon/logo.png" alt="Logo Abraham Bartoloni" width="48" height="48" className='max-w-12 max-h-12'/>
+              <img src={`${import.meta.env.BASE_URL}/favicon/logo.png`} alt="Logo Abraham Bartoloni" width="48" height="48" className='max-w-12 max-h-12'/>
             </button>
           </div>
 
