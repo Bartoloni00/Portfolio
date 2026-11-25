@@ -73,7 +73,8 @@ export const projects: ProjectItem[] = [
     links: {
       github: 'https://github.com/No-Country-simulation/Equipo_15_WebApp/tree/dev',
       demo: ''
-    }
+    },
+    image: `${baseUrl}/projects/nocountrytalent_logo.jpeg`
   },
 
   // ------------------ Proyectos personales / open-source ------------------
