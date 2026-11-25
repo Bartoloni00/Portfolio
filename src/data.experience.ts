@@ -1,56 +1,56 @@
 import { ExperienceItem } from './types';
 import { baseUrl } from './config';
-export const experiences: ExperienceItem[] = [
-    {
-    id: 'exp-1',
-    role: {
-        es: 'Software Engineer (Full Stack)',
-        en: 'Software Engineer (Full Stack)'
-    },
-    company: 'Syloper',
-    period: {
-        es: 'diciembre de 2025 - actualidad',
-        en: 'Dec 2025 - Present'
-    },
-    description: {
-        es: 'Responsable técnico principal de la implementación end-to-end de una plataforma para la gestión de solicitudes de mantenimiento y garantías de maquinaria agropecuaria. Desde el kickoff hasta su publicación y operación, participo en el diseño de arquitectura y desarrollo de aproximadamente el 95% de sus componentes técnicos: PWA, Backoffice, API, base de datos, infraestructura y CI/CD. También participo en otros proyectos de la empresa, abordando problemas de rendimiento, evolución de aplicaciones móviles y modernización de plataformas financieras.',
-        en: 'Main technical contributor to the end-to-end implementation of a platform for managing maintenance requests and agricultural machinery warranties. From kickoff to deployment and operation, I participate in architecture design and develop approximately 95% of its technical components: PWA, backoffice, API, database, infrastructure, and CI/CD. I also contribute to other company projects, addressing performance bottlenecks, mobile application evolution, and financial platform modernization.'
-    },
-    items: {
-        es: [
-        'Diseño e implementación de arquitectura full stack para una plataforma productiva, incluyendo autenticación, modelo de datos, operaciones offline y separación de responsabilidades entre PWA, Backoffice y API.',
-        'Implementación de procesos asíncronos y desacoplados para auditoría, reportes y notificaciones mediante eventos, Redis, Laravel Horizon y jobs.',
-        'Diseño y configuración de infraestructura en Railway y AWS S3, automatización de deployments con GitHub Actions y configuración de observabilidad.',
-        'Optimización de plataforma financiera: reducción de aproximadamente 40 segundos a 600 ms en un endpoint de información financiera en tiempo real.',
-        'Evolución de aplicación móvil logística: migración de Android API 34 a 36, implementación de mecanismos de encriptación de datos y mejoras de UX.',
-        'Implementación de aproximadamente 90% de cobertura de tests unitarios y de feature en backend, integrados al pipeline de CI/CD.',
-        'Participación en refinamientos, estimaciones, code reviews y decisiones técnicas junto a PO, CTO, QA y clientes.'
+
+const syloper = {
+        id: 'exp-1',
+        role: {
+            es: 'Software Engineer (Full Stack)',
+            en: 'Software Engineer (Full Stack)'
+        },
+        company: 'Syloper',
+        period: {
+            es: 'diciembre de 2025 - actualidad',
+            en: 'Dec 2025 - Present'
+        },
+        description: {
+            es: 'Responsable técnico principal de la implementación end-to-end de una plataforma para la gestión de solicitudes de mantenimiento y garantías de maquinaria agropecuaria. Desde el kickoff hasta su publicación y operación, participo en el diseño de arquitectura y desarrollo de aproximadamente el 95% de sus componentes técnicos: PWA, Backoffice, API, base de datos, infraestructura y CI/CD. También participo en otros proyectos de la empresa, abordando problemas de rendimiento, evolución de aplicaciones móviles y modernización de plataformas financieras.',
+            en: 'Main technical contributor to the end-to-end implementation of a platform for managing maintenance requests and agricultural machinery warranties. From kickoff to deployment and operation, I participate in architecture design and develop approximately 95% of its technical components: PWA, backoffice, API, database, infrastructure, and CI/CD. I also contribute to other company projects, addressing performance bottlenecks, mobile application evolution, and financial platform modernization.'
+        },
+        items: {
+            es: [
+            'Diseño e implementación de arquitectura full stack para una plataforma productiva, incluyendo autenticación, modelo de datos, operaciones offline y separación de responsabilidades entre PWA, Backoffice y API.',
+            'Implementación de procesos asíncronos y desacoplados para auditoría, reportes y notificaciones mediante eventos, Redis, Laravel Horizon y jobs.',
+            'Diseño y configuración de infraestructura en Railway y AWS S3, automatización de deployments con GitHub Actions y configuración de observabilidad.',
+            'Optimización de plataforma financiera: reducción de aproximadamente 40 segundos a 600 ms en un endpoint de información financiera en tiempo real.',
+            'Evolución de aplicación móvil logística: migración de Android API 34 a 36, implementación de mecanismos de encriptación de datos y mejoras de UX.',
+            'Implementación de aproximadamente 90% de cobertura de tests unitarios y de feature en backend, integrados al pipeline de CI/CD.',
+            'Participación en refinamientos, estimaciones, code reviews y decisiones técnicas junto a PO, CTO, QA y clientes.'
+            ],
+            en: [
+            'Designed and implemented the full-stack architecture of a production platform, including authentication, data modeling, offline operations, and separation of concerns between PWA, backoffice, and API.',
+            'Implemented asynchronous and decoupled workflows for auditing, reporting, and notifications using events, Redis, Laravel Horizon, and background jobs.',
+            'Designed and configured infrastructure on Railway and AWS S3, automated deployments with GitHub Actions, and established observability.',
+            'Optimized a financial platform, reducing a real-time financial data endpoint from approximately 40 seconds to 600 ms.',
+            'Evolved a logistics mobile application through Android API 34 to 36 migration, user data encryption mechanisms, and UX improvements.',
+            'Implemented approximately 90% backend test coverage through unit and feature tests integrated into the CI/CD pipeline.',
+            'Participated in refinements, estimations, code reviews, and technical decisions alongside PO, CTO, QA, and clients.'
+            ]
+        },
+        technologies: [
+            'Laravel',
+            'React',
+            'Ionic',
+            'TypeScript',
+            'PostgreSQL',
+            'Redis',
+            'Laravel Horizon',
+            'AWS S3',
+            'Railway',
+            'GitHub Actions'
         ],
-        en: [
-        'Designed and implemented the full-stack architecture of a production platform, including authentication, data modeling, offline operations, and separation of concerns between PWA, backoffice, and API.',
-        'Implemented asynchronous and decoupled workflows for auditing, reporting, and notifications using events, Redis, Laravel Horizon, and background jobs.',
-        'Designed and configured infrastructure on Railway and AWS S3, automated deployments with GitHub Actions, and established observability.',
-        'Optimized a financial platform, reducing a real-time financial data endpoint from approximately 40 seconds to 600 ms.',
-        'Evolved a logistics mobile application through Android API 34 to 36 migration, user data encryption mechanisms, and UX improvements.',
-        'Implemented approximately 90% backend test coverage through unit and feature tests integrated into the CI/CD pipeline.',
-        'Participated in refinements, estimations, code reviews, and technical decisions alongside PO, CTO, QA, and clients.'
-        ]
-    },
-    technologies: [
-        'Laravel',
-        'React',
-        'Ionic',
-        'TypeScript',
-        'PostgreSQL',
-        'Redis',
-        'Laravel Horizon',
-        'AWS S3',
-        'Railway',
-        'GitHub Actions'
-    ],
-    image: `${baseUrl}experience/syloper_logo.jpeg`
-    },
-    {
+        image: `${baseUrl}experience/syloper_logo.jpeg`
+    };
+const freelance = {
     id: 'exp-2',
     role: {
         es: 'Full Stack Developer (Freelance)',
@@ -93,8 +93,8 @@ export const experiences: ExperienceItem[] = [
         'TypeScript'
     ],
     image: `${baseUrl}experience/freelance.jpeg`
-    },
-    {
+    };
+const telepagos = {
     id: 'exp-3',
     role: {
         es: 'Backend Developer (Laravel)',
@@ -125,8 +125,8 @@ export const experiences: ExperienceItem[] = [
     },
     technologies: ['PHP', 'Laravel', 'MySQL', 'Swagger'],
     image: `${baseUrl}experience/telepagos_logo.jpeg`
-    },
-    {
+    };
+const itPoint = {
     id: 'exp-4',
     role: {
         es: 'Consultor IT',
@@ -155,8 +155,8 @@ export const experiences: ExperienceItem[] = [
     },
     technologies: ['Windows', 'Linux', 'Hardware'],
     image: `${baseUrl}experience/itPoint_logo.jpeg`
-    },
-    {
+    };
+const tutor = {
     id: 'exp-5',
     role: {
         es: 'Tutor Privado de Programación',
@@ -185,5 +185,6 @@ export const experiences: ExperienceItem[] = [
     },
     technologies: ['PHP', 'Laravel', 'Node.js', 'React'],
     image: `${baseUrl}experience/tutoria.jpg`
-    }
-];
+    };
+
+export const experiences: ExperienceItem[] = [ syloper, freelance, telepagos, itPoint, tutor];
