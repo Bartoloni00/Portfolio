@@ -14,12 +14,12 @@ export default function Hero({ language }: HeroProps) {
       en: "Hi, I'm",
     },
     role: {
-      es: 'Backend Developer | Full Stack Engineer',
-      en: 'Backend Developer | Full Stack Engineer',
+      es: 'Software Engineer | Backend · Full Stack · Architecture',
+      en: 'Software Engineer | Backend · Full Stack · Architecture',
     },
     tagline: {
-      es: "Combino predisposición para entender el negocio con criterio técnico y experiencia en arquitectura, deuda técnica, pipelines de tests y releases en web, App Store y Google Play para sacar adelante cada sistema de la mejor manera.",
-      en: "I combine a willingness to understand the business with engineering judgment and experience in architecture, technical debt, test pipelines, and releases across web, the App Store, and Google Play to deliver each system as well as possible.",
+      es: 'Desarrollo y evoluciono productos de software combinando pensamiento arquitectónico, ingeniería backend y comprensión del negocio. Me enfoco en analizar problemas complejos, tomar decisiones técnicas fundamentadas y construir sistemas mantenibles.',
+      en: 'I build and evolve software products by combining architectural thinking, backend engineering and business understanding. I focus on analyzing complex problems, making sound technical decisions and building maintainable systems.',
     },
     cv: {
       es: 'Descargar CV',

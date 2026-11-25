@@ -50,10 +50,10 @@ export default function TechStack({ language }: TechStackProps) {
                     ? `Visitar sitio oficial de ${tech.name}`
                     : `Visit official ${tech.name} website`
                 }
-                className="group relative flex items-center gap-3 bg-neutral-800/40 backdrop-blur-md border border-white/5 px-4 py-2 rounded-xl transition-all duration-300 hover:border-primary/50 hover:bg-neutral-800/60 hover:-translate-y-1 animate-slideInUp cursor-pointer"
+                className="group relative flex items-center gap-3 bg-neutral-800/40 backdrop-blur-md border border-white/5 px-2 py-1 rounded-xl transition-all duration-300 hover:border-primary/50 hover:bg-neutral-800/60 hover:-translate-y-1 animate-slideInUp cursor-pointer"
                 style={{ animationDelay: `${index * 50}ms` }}
               >
-                <div className="w-8 h-8 flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-500">
+                <div className="w-6 h-6 flex items-center justify-center grayscale group-hover:grayscale-0 transition-all duration-500">
                   {tech.isLucide ? (
                     <Database className="text-white" />
                   ) : (
@@ -64,7 +64,7 @@ export default function TechStack({ language }: TechStackProps) {
                   <span className="text-text-primary/70 font-semibold text-sm tracking-tight group-hover:text-text-primary transition-colors">
                     {tech.name}
                   </span>
-                  <span className="text-[10px] text-primary/60 font-bold uppercase tracking-widest">
+                  <span className="text-[8px] text-primary/60 font-bold uppercase tracking-widest">
                     {formatExperience(years, language)}
                   </span>
                 </div>
