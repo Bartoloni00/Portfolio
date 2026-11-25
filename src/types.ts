@@ -26,4 +26,16 @@ export interface ProjectItem {
   };
 }
 
+export interface TechStackProps {
+  language: Language;
+}
+
+export interface TechItem {
+  name: string;
+  icon: string;
+  url: string;
+  since: string; // Formato 'YYYY-MM-DD'
+  isLucide?: boolean;
+}
+
 export type Language = 'es' | 'en';
